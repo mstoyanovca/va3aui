@@ -1,0 +1,17 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-932,-1082",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.7.1 2023-07-26 3bc4126617 VDI=43 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace inst dds_compiler_0 -pg 1 -lvl 1 -x -310 -y -540 -defaultsOSRD
+preplace inst cmpy_0 -pg 1 -lvl 1 -x -310 -y -750 -defaultsOSRD
+preplace inst cic_compiler_0 -pg 1 -lvl 2 -x -20 -y -760 -defaultsOSRD
+preplace inst fir_compiler_0 -pg 1 -lvl 3 -x 320 -y -740 -defaultsOSRD
+preplace netloc Net 1 0 3 -450 -670 -170 -690 130
+levelinfo -pg 1 -750 -310 -20 320 470
+pagesize -pg 1 -db -bbox -sgen -750 -1160 500 330
+"
+}
+0
