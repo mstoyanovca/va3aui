@@ -14,7 +14,7 @@
 # if n is not specified, the default is 8
 # if the optional argument "fir" is given, an order n FIR filter is used, with a default order of 30 if n is not given
 
-addpath("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\octave")
+addpath("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\matlab")
 pkg load communications
 pkg load signal
 clear all
@@ -34,9 +34,8 @@ figure(1)
 subplot(5, 1, 1)
 {
   df = -fs/2 : 1e3 : fs/2
-  samples = length(df)
 }
-plot(df, abs(fftshift(fft(usb)/samples)))
+plot(df, abs(fftshift(fft(usb)/length(df))))
 axis([-10e6, 10e6, 0, 0.5])
 title('USB')
 xlabel('Hz')
@@ -105,39 +104,4 @@ title('FIR I and FIR Q')
 xlabel('s')
 ylabel('A')
 grid on
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
