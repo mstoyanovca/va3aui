@@ -1,36 +1,8 @@
-# b = fir1(n - 1, w, type)
-# order n FIR filter
-# normalized frequency cutoff w
-# returns filter coefficients in b
-# if w is a scalar, it specifies the frequency cutoff for a lowpass or highpass filter
-# if w is a two-element vector, the two values specify the edges of a bandpass or bandstop filter
-# type can be "low", "high", "stop", "pass", "bandpass"
-
-# [h, w] = freqz(b, a, n, fs)
-# complex frequency response h
-# w is a vector of the frequencies
-# IIR filter with numerator and denominator coefficients b and a
-# n angular frequencies between 0 and 2*pi
-# if a is omitted, the denominator is assumed to be 1 (this corresponds to a simple FIR filter)
-# if n is omitted, a value of 512 is assumed
-# fs - return frequencies in Hz, instead of radians assuming a sampling rate fs
-
-# y = filter(b, a, x)
-# numerator and denominator coefficients b and a
-# the denominator is 1 for a simple FIR filter
-# x - input signal
-
-# plot (t, sin(t))
-# subplot (rows, cols, index)
-# 1 2 3
-# 4 5 6
-
-
-addpath("C:\Users\Martin Stoyanov\octave")
+addpath("C:\Users\Martin Stoyanov\matlab")
 pkg load signal
 close all
-# clear all
-# clc
+clear all
+clc
 
 
 # 14.35MHz LPF design:
