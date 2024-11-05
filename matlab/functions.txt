@@ -1,3 +1,5 @@
+y = linspace(x1, x2, n)
+
 b = fir1(n - 1, w, type)
 order n FIR filter
 normalized frequency cutoff w
