@@ -11,12 +11,12 @@ df = -fs/2 : 1e3 : fs/2-1e3
 
 fa = 1e3
 audio = sin(2*pi*fa*t)
-audio_i = -imag(hilbert(audio))
-audio_q = audio
+audio_i = audio
+audio_q = -imag(hilbert(audio))
 
 fc = 7.074e6
-dds_i = cos(2*pi*fc*t)
-dds_q = sin(2*pi*fc*t)
+dds_i = sin(2*pi*fc*t)
+dds_q = cos(2*pi*fc*t)
 
 i = audio_i.*dds_i
 q = audio_q.*dds_q
@@ -31,7 +31,7 @@ axis([0, 1e-3, -1, 1])
 title('Audio')
 xlabel('s')
 ylabel('A')
-legend('Audio I', 'Audio Q')
+legend('I', 'Q')
 grid on
 subplot(3, 1, 2)
 plot(t, dds_i)
@@ -42,23 +42,21 @@ axis([0, 1e-6, -1, 1])
 title('DDS')
 xlabel('s')
 ylabel('A')
-legend('DDS I', 'DDS Q')
+legend('I', 'Q')
 grid on
 subplot(3, 1, 3)
 plot(df, abs(fftshift(fft(i)/length(df))))
 hold on
 plot(df, abs(fftshift(fft(q)/length(df))))
 hold on
-# LSB:
 plot(df, abs(fftshift(fft(i+q)/length(df))))
 hold on
-# USB:
 plot(df, abs(fftshift(fft(i-q)/length(df))))
 hold off
 axis([-10e6, 10e6, 0, 0.6])
 title('SSB')
 xlabel('Hz')
 ylabel('A')
-legend('I', 'Q', 'LSB', 'USB')
+legend('I', 'Q', 'LSB(I+Q)', 'USB(I-Q)')
 grid on
 
