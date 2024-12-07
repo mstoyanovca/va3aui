@@ -1,0 +1,14 @@
+for decimation:
+- CIC filter
+  -- huge rolloff
+  -- requires FIR compensation/equalization filter
+- FIR filter 8 - 16
+  -  keep the order an odd number
+
+for interpolation:
+- FIR filter
+- CIC filter
+
+
+Tang Nano 9K
+GW1NR-9

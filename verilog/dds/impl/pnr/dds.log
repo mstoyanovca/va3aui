@@ -1,0 +1,4 @@
+Reading netlist file: "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\impl\gwsynthesis\dds.vg"
+Parsing netlist file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\impl\gwsynthesis\dds.vg" completed
+ERROR  (PA2024) : The number(76) of ports exceeds the resource limit 59 regular I/Os and 1 RECONFIG_N I/Os of current device, you can also use 4 JTAG, 3 SSPI and 4 MSPI I/Os by configuring Dual-Purpose Pin as regular I/Os.
+NOTE  (PA0005) : Processing netlist completed with errors

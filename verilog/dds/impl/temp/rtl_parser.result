@@ -1,0 +1,20 @@
+[
+ {
+  "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/dds.v",
+  "InstLine" : 3129,
+  "InstName" : "dds_top",
+  "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/dds.v",
+  "ModuleLine" : 3129,
+  "ModuleName" : "dds_top",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/dds.v",
+    "InstLine" : 3151,
+    "InstName" : "u_dds_compiler_core",
+    "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/dds.v",
+    "ModuleLine" : 12,
+    "ModuleName" : "~dds_ii_core.dds_top"
+   }
+  ]
+ }
+]
