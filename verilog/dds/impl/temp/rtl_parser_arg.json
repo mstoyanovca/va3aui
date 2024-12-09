@@ -2,7 +2,11 @@
  "Device" : "GW1NR-9C",
  "Files" : [
   {
-   "Path" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/dds.v",
+   "Path" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/dds_ii.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/top.v",
    "Type" : "verilog"
   }
  ],

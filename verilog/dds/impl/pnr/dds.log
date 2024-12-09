@@ -1,4 +1,29 @@
 Reading netlist file: "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\impl\gwsynthesis\dds.vg"
 Parsing netlist file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\impl\gwsynthesis\dds.vg" completed
-ERROR  (PA2024) : The number(76) of ports exceeds the resource limit 59 regular I/Os and 1 RECONFIG_N I/Os of current device, you can also use 4 JTAG, 3 SSPI and 4 MSPI I/Os by configuring Dual-Purpose Pin as regular I/Os.
-NOTE  (PA0005) : Processing netlist completed with errors
+Processing netlist completed
+Reading constraint file: "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\dds.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\impl\pnr\dds.power.html" completed
+Generate file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\impl\pnr\dds.pin.html" completed
+Generate file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\impl\pnr\dds.rpt.html" completed
+Generate file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\impl\pnr\dds.rpt.txt" completed
+Generate file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\impl\pnr\dds.tr.html" completed
+Sun Dec  8 20:33:11 2024
+

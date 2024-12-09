@@ -1,7 +1,7 @@
 [General]
 ipc_version=4
-file=dds
-module=dds_top
+file=dds_ii
+module=DDS_II_Top
 target_device=gw1nr9c-004
 type=DDS II
 version=1.0
@@ -9,7 +9,7 @@ version=1.0
 [Config]
 ChannelIDout=false
 ConfiguationOptions=SIN COS LUT Only
-Disable_IO_Insertion=true
+Disable_IO_Insertion=false
 FrequencyResolution=1
 LANG=0
 Latency=8

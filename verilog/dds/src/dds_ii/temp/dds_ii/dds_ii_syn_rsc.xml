@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="DDS_II_Top" Register="423" Alu="50" Lut="376" MULT18X18="1" MULT36X36="2" ALU54D="2" Bsram="6" T_Register="423(423)" T_Alu="50(50)" T_Lut="376(376)" T_MULT18X18="1(1)" T_MULT36X36="2(2)" T_ALU54D="2(2)" T_Bsram="6(6)"/>

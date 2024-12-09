@@ -1,11 +1,12 @@
 GowinSynthesis start
 Running parser ...
-Analyzing Verilog file 'C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\dds.v'
-Compiling module 'dds_top'("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\dds.v":3129)
-Compiling module '**'("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\dds.v":3127)
-NOTE  (EX0101) : Current top module is "dds_top"
+Analyzing Verilog file 'C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\dds_ii.v'
+Analyzing Verilog file 'C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\top.v'
+Compiling module 'top'("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\top.v":3)
+Compiling module 'dds_ii'("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\dds_ii.v":4020)
+Compiling module '**'("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\dds_ii.v":4018)
+NOTE  (EX0101) : Current top module is "top"
 [5%] Running netlist conversion ...
-WARN  (CV0016) : Input rst_n_i is unused("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\dds.v":3140)
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
 [15%] Optimizing Phase 1 completed

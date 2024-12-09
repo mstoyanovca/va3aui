@@ -1,7 +1,9 @@
 -d C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\impl\gwsynthesis\dds.vg
 -p GW1NR-9C-QFN88P-6
 -pn GW1NR-LV9QN88PC6/I5
+-cst C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\dds.cst
 -cfg C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\impl\pnr\device.cfg
+-sdc C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\dds.sdc
 -bit
 -tr
 -ph

@@ -2,10 +2,10 @@
 //All rights reserved.
 //File Title: Post-PnR Verilog Simulation Model file
 //Tool Version: V1.9.10.03 (64-bit)
-//Created Time: Thu Dec  5 21:25:38 2024
+//Created Time: Sun Dec  8 19:07:04 2024
 
 `timescale 100 ps/100 ps
-module dds_top(
+module DDS_II_Top(
 	clk_i,
 	rst_n_i,
 	phase_valid_i,
@@ -24,12 +24,18 @@ output data_valid_o;
 wire GND;
 wire VCC;
 wire clk_i;
+wire clk_i_d;
 wire [24:0] cosine_o;
+wire [24:0] cosine_o_d;
 wire data_valid_o;
+wire data_valid_o_d;
 wire [24:0] phase_i;
+wire [24:0] phase_i_d;
 wire phase_valid_i;
+wire phase_valid_i_d;
 wire rst_n_i;
 wire [24:0] sine_o;
+wire [24:0] sine_o_d;
 wire \u_dds_compiler_core/w1_data_valid ;
 wire [24:0] \u_dds_compiler_core/w1_cosine ;
 wire [24:0] \u_dds_compiler_core/w1_sine ;
@@ -726,76 +732,388 @@ GND GND_cZ (
 GSR GSR (
 	.GSRI(VCC)
 );
+IBUF clk_i_ibuf (
+	.I(clk_i),
+	.O(clk_i_d)
+);
+IBUF phase_valid_i_ibuf (
+	.I(phase_valid_i),
+	.O(phase_valid_i_d)
+);
+IBUF phase_i_0_ibuf (
+	.I(phase_i[0]),
+	.O(phase_i_d[0])
+);
+IBUF phase_i_1_ibuf (
+	.I(phase_i[1]),
+	.O(phase_i_d[1])
+);
+IBUF phase_i_2_ibuf (
+	.I(phase_i[2]),
+	.O(phase_i_d[2])
+);
+IBUF phase_i_3_ibuf (
+	.I(phase_i[3]),
+	.O(phase_i_d[3])
+);
+IBUF phase_i_4_ibuf (
+	.I(phase_i[4]),
+	.O(phase_i_d[4])
+);
+IBUF phase_i_5_ibuf (
+	.I(phase_i[5]),
+	.O(phase_i_d[5])
+);
+IBUF phase_i_6_ibuf (
+	.I(phase_i[6]),
+	.O(phase_i_d[6])
+);
+IBUF phase_i_7_ibuf (
+	.I(phase_i[7]),
+	.O(phase_i_d[7])
+);
+IBUF phase_i_8_ibuf (
+	.I(phase_i[8]),
+	.O(phase_i_d[8])
+);
+IBUF phase_i_9_ibuf (
+	.I(phase_i[9]),
+	.O(phase_i_d[9])
+);
+IBUF phase_i_10_ibuf (
+	.I(phase_i[10]),
+	.O(phase_i_d[10])
+);
+IBUF phase_i_11_ibuf (
+	.I(phase_i[11]),
+	.O(phase_i_d[11])
+);
+IBUF phase_i_12_ibuf (
+	.I(phase_i[12]),
+	.O(phase_i_d[12])
+);
+IBUF phase_i_13_ibuf (
+	.I(phase_i[13]),
+	.O(phase_i_d[13])
+);
+IBUF phase_i_14_ibuf (
+	.I(phase_i[14]),
+	.O(phase_i_d[14])
+);
+IBUF phase_i_15_ibuf (
+	.I(phase_i[15]),
+	.O(phase_i_d[15])
+);
+IBUF phase_i_16_ibuf (
+	.I(phase_i[16]),
+	.O(phase_i_d[16])
+);
+IBUF phase_i_17_ibuf (
+	.I(phase_i[17]),
+	.O(phase_i_d[17])
+);
+IBUF phase_i_18_ibuf (
+	.I(phase_i[18]),
+	.O(phase_i_d[18])
+);
+IBUF phase_i_19_ibuf (
+	.I(phase_i[19]),
+	.O(phase_i_d[19])
+);
+IBUF phase_i_20_ibuf (
+	.I(phase_i[20]),
+	.O(phase_i_d[20])
+);
+IBUF phase_i_21_ibuf (
+	.I(phase_i[21]),
+	.O(phase_i_d[21])
+);
+IBUF phase_i_22_ibuf (
+	.I(phase_i[22]),
+	.O(phase_i_d[22])
+);
+IBUF phase_i_23_ibuf (
+	.I(phase_i[23]),
+	.O(phase_i_d[23])
+);
+IBUF phase_i_24_ibuf (
+	.I(phase_i[24]),
+	.O(phase_i_d[24])
+);
+OBUF cosine_o_0_obuf (
+	.I(cosine_o_d[0]),
+	.O(cosine_o[0])
+);
+OBUF cosine_o_1_obuf (
+	.I(cosine_o_d[1]),
+	.O(cosine_o[1])
+);
+OBUF cosine_o_2_obuf (
+	.I(cosine_o_d[2]),
+	.O(cosine_o[2])
+);
+OBUF cosine_o_3_obuf (
+	.I(cosine_o_d[3]),
+	.O(cosine_o[3])
+);
+OBUF cosine_o_4_obuf (
+	.I(cosine_o_d[4]),
+	.O(cosine_o[4])
+);
+OBUF cosine_o_5_obuf (
+	.I(cosine_o_d[5]),
+	.O(cosine_o[5])
+);
+OBUF cosine_o_6_obuf (
+	.I(cosine_o_d[6]),
+	.O(cosine_o[6])
+);
+OBUF cosine_o_7_obuf (
+	.I(cosine_o_d[7]),
+	.O(cosine_o[7])
+);
+OBUF cosine_o_8_obuf (
+	.I(cosine_o_d[8]),
+	.O(cosine_o[8])
+);
+OBUF cosine_o_9_obuf (
+	.I(cosine_o_d[9]),
+	.O(cosine_o[9])
+);
+OBUF cosine_o_10_obuf (
+	.I(cosine_o_d[10]),
+	.O(cosine_o[10])
+);
+OBUF cosine_o_11_obuf (
+	.I(cosine_o_d[11]),
+	.O(cosine_o[11])
+);
+OBUF cosine_o_12_obuf (
+	.I(cosine_o_d[12]),
+	.O(cosine_o[12])
+);
+OBUF cosine_o_13_obuf (
+	.I(cosine_o_d[13]),
+	.O(cosine_o[13])
+);
+OBUF cosine_o_14_obuf (
+	.I(cosine_o_d[14]),
+	.O(cosine_o[14])
+);
+OBUF cosine_o_15_obuf (
+	.I(cosine_o_d[15]),
+	.O(cosine_o[15])
+);
+OBUF cosine_o_16_obuf (
+	.I(cosine_o_d[16]),
+	.O(cosine_o[16])
+);
+OBUF cosine_o_17_obuf (
+	.I(cosine_o_d[17]),
+	.O(cosine_o[17])
+);
+OBUF cosine_o_18_obuf (
+	.I(cosine_o_d[18]),
+	.O(cosine_o[18])
+);
+OBUF cosine_o_19_obuf (
+	.I(cosine_o_d[19]),
+	.O(cosine_o[19])
+);
+OBUF cosine_o_20_obuf (
+	.I(cosine_o_d[20]),
+	.O(cosine_o[20])
+);
+OBUF cosine_o_21_obuf (
+	.I(cosine_o_d[21]),
+	.O(cosine_o[21])
+);
+OBUF cosine_o_22_obuf (
+	.I(cosine_o_d[22]),
+	.O(cosine_o[22])
+);
+OBUF cosine_o_23_obuf (
+	.I(cosine_o_d[23]),
+	.O(cosine_o[23])
+);
+OBUF cosine_o_24_obuf (
+	.I(cosine_o_d[24]),
+	.O(cosine_o[24])
+);
+OBUF sine_o_0_obuf (
+	.I(sine_o_d[0]),
+	.O(sine_o[0])
+);
+OBUF sine_o_1_obuf (
+	.I(sine_o_d[1]),
+	.O(sine_o[1])
+);
+OBUF sine_o_2_obuf (
+	.I(sine_o_d[2]),
+	.O(sine_o[2])
+);
+OBUF sine_o_3_obuf (
+	.I(sine_o_d[3]),
+	.O(sine_o[3])
+);
+OBUF sine_o_4_obuf (
+	.I(sine_o_d[4]),
+	.O(sine_o[4])
+);
+OBUF sine_o_5_obuf (
+	.I(sine_o_d[5]),
+	.O(sine_o[5])
+);
+OBUF sine_o_6_obuf (
+	.I(sine_o_d[6]),
+	.O(sine_o[6])
+);
+OBUF sine_o_7_obuf (
+	.I(sine_o_d[7]),
+	.O(sine_o[7])
+);
+OBUF sine_o_8_obuf (
+	.I(sine_o_d[8]),
+	.O(sine_o[8])
+);
+OBUF sine_o_9_obuf (
+	.I(sine_o_d[9]),
+	.O(sine_o[9])
+);
+OBUF sine_o_10_obuf (
+	.I(sine_o_d[10]),
+	.O(sine_o[10])
+);
+OBUF sine_o_11_obuf (
+	.I(sine_o_d[11]),
+	.O(sine_o[11])
+);
+OBUF sine_o_12_obuf (
+	.I(sine_o_d[12]),
+	.O(sine_o[12])
+);
+OBUF sine_o_13_obuf (
+	.I(sine_o_d[13]),
+	.O(sine_o[13])
+);
+OBUF sine_o_14_obuf (
+	.I(sine_o_d[14]),
+	.O(sine_o[14])
+);
+OBUF sine_o_15_obuf (
+	.I(sine_o_d[15]),
+	.O(sine_o[15])
+);
+OBUF sine_o_16_obuf (
+	.I(sine_o_d[16]),
+	.O(sine_o[16])
+);
+OBUF sine_o_17_obuf (
+	.I(sine_o_d[17]),
+	.O(sine_o[17])
+);
+OBUF sine_o_18_obuf (
+	.I(sine_o_d[18]),
+	.O(sine_o[18])
+);
+OBUF sine_o_19_obuf (
+	.I(sine_o_d[19]),
+	.O(sine_o[19])
+);
+OBUF sine_o_20_obuf (
+	.I(sine_o_d[20]),
+	.O(sine_o[20])
+);
+OBUF sine_o_21_obuf (
+	.I(sine_o_d[21]),
+	.O(sine_o[21])
+);
+OBUF sine_o_22_obuf (
+	.I(sine_o_d[22]),
+	.O(sine_o[22])
+);
+OBUF sine_o_23_obuf (
+	.I(sine_o_d[23]),
+	.O(sine_o[23])
+);
+OBUF sine_o_24_obuf (
+	.I(sine_o_d[24]),
+	.O(sine_o[24])
+);
+OBUF data_valid_o_obuf (
+	.I(data_valid_o_d),
+	.O(data_valid_o)
+);
 LUT4 \u_dds_compiler_core/u_dds_lut_table/n823_s0  (
 	.I0(\u_dds_compiler_core/u_dds_lut_table/n823_5 ),
-	.I1(phase_i[22]),
+	.I1(phase_i_d[22]),
 	.I2(\u_dds_compiler_core/u_dds_lut_table/n823_6 ),
-	.I3(phase_i[21]),
+	.I3(phase_i_d[21]),
 	.F(\u_dds_compiler_core/u_dds_lut_table/n823_4 )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/n823_s0 .INIT=16'h1FE0;
 LUT4 \u_dds_compiler_core/u_dds_lut_table/n824_s0  (
 	.I0(\u_dds_compiler_core/u_dds_lut_table/n824_4 ),
-	.I1(phase_i[22]),
+	.I1(phase_i_d[22]),
 	.I2(\u_dds_compiler_core/u_dds_lut_table/n823_6 ),
-	.I3(phase_i[20]),
+	.I3(phase_i_d[20]),
 	.F(\u_dds_compiler_core/u_dds_lut_table/n824_3 )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/n824_s0 .INIT=16'h1FE0;
 LUT4 \u_dds_compiler_core/u_dds_lut_table/n825_s0  (
-	.I0(phase_i[22]),
-	.I1(phase_i[18]),
+	.I0(phase_i_d[22]),
+	.I1(phase_i_d[18]),
 	.I2(\u_dds_compiler_core/u_dds_lut_table/n823_6 ),
-	.I3(phase_i[19]),
+	.I3(phase_i_d[19]),
 	.F(\u_dds_compiler_core/u_dds_lut_table/n825_3 )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/n825_s0 .INIT=16'h4FB0;
 LUT2 \u_dds_compiler_core/u_dds_lut_table/n826_s0  (
-	.I0(phase_i[18]),
+	.I0(phase_i_d[18]),
 	.I1(\u_dds_compiler_core/u_dds_lut_table/n823_6 ),
 	.F(\u_dds_compiler_core/u_dds_lut_table/n826_3 )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/n826_s0 .INIT=4'h6;
 LUT4 \u_dds_compiler_core/u_dds_lut_table/n827_s0  (
-	.I0(phase_i[22]),
-	.I1(phase_i[16]),
+	.I0(phase_i_d[22]),
+	.I1(phase_i_d[16]),
 	.I2(\u_dds_compiler_core/u_dds_lut_table/n827_4 ),
-	.I3(phase_i[17]),
+	.I3(phase_i_d[17]),
 	.F(\u_dds_compiler_core/u_dds_lut_table/n827_3 )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/n827_s0 .INIT=16'h4FB0;
 LUT2 \u_dds_compiler_core/u_dds_lut_table/n828_s0  (
-	.I0(phase_i[16]),
+	.I0(phase_i_d[16]),
 	.I1(\u_dds_compiler_core/u_dds_lut_table/n827_4 ),
 	.F(\u_dds_compiler_core/u_dds_lut_table/n828_3 )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/n828_s0 .INIT=4'h6;
 LUT4 \u_dds_compiler_core/u_dds_lut_table/n829_s0  (
-	.I0(phase_i[22]),
-	.I1(phase_i[14]),
+	.I0(phase_i_d[22]),
+	.I1(phase_i_d[14]),
 	.I2(\u_dds_compiler_core/u_dds_lut_table/n829_4 ),
-	.I3(phase_i[15]),
+	.I3(phase_i_d[15]),
 	.F(\u_dds_compiler_core/u_dds_lut_table/n829_3 )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/n829_s0 .INIT=16'hF40B;
 LUT2 \u_dds_compiler_core/u_dds_lut_table/n830_s0  (
-	.I0(phase_i[14]),
+	.I0(phase_i_d[14]),
 	.I1(\u_dds_compiler_core/u_dds_lut_table/n829_4 ),
 	.F(\u_dds_compiler_core/u_dds_lut_table/n830_3 )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/n830_s0 .INIT=4'h9;
 LUT4 \u_dds_compiler_core/u_dds_lut_table/n831_s0  (
-	.I0(phase_i[12]),
-	.I1(phase_i[11]),
-	.I2(phase_i[22]),
-	.I3(phase_i[13]),
+	.I0(phase_i_d[12]),
+	.I1(phase_i_d[11]),
+	.I2(phase_i_d[22]),
+	.I3(phase_i_d[13]),
 	.F(\u_dds_compiler_core/u_dds_lut_table/n831_3 )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/n831_s0 .INIT=16'h0EF1;
 LUT3 \u_dds_compiler_core/u_dds_lut_table/n832_s0  (
-	.I0(phase_i[22]),
-	.I1(phase_i[11]),
-	.I2(phase_i[12]),
+	.I0(phase_i_d[22]),
+	.I1(phase_i_d[11]),
+	.I2(phase_i_d[12]),
 	.F(\u_dds_compiler_core/u_dds_lut_table/n832_3 )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/n832_s0 .INIT=8'h4B;
@@ -2303,39 +2621,39 @@ LUT4 \u_dds_compiler_core/u_dds_lut_table/o_sine_24_s3  (
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_24_s3 .INIT=16'hFC0A;
 LUT3 \u_dds_compiler_core/u_dds_lut_table/n823_s1  (
-	.I0(phase_i[20]),
-	.I1(phase_i[19]),
-	.I2(phase_i[18]),
+	.I0(phase_i_d[20]),
+	.I1(phase_i_d[19]),
+	.I2(phase_i_d[18]),
 	.F(\u_dds_compiler_core/u_dds_lut_table/n823_5 )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/n823_s1 .INIT=8'h01;
 LUT4 \u_dds_compiler_core/u_dds_lut_table/n823_s2  (
-	.I0(phase_i[17]),
-	.I1(phase_i[16]),
-	.I2(phase_i[22]),
+	.I0(phase_i_d[17]),
+	.I1(phase_i_d[16]),
+	.I2(phase_i_d[22]),
 	.I3(\u_dds_compiler_core/u_dds_lut_table/n827_4 ),
 	.F(\u_dds_compiler_core/u_dds_lut_table/n823_6 )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/n823_s2 .INIT=16'hF100;
 LUT2 \u_dds_compiler_core/u_dds_lut_table/n824_s1  (
-	.I0(phase_i[19]),
-	.I1(phase_i[18]),
+	.I0(phase_i_d[19]),
+	.I1(phase_i_d[18]),
 	.F(\u_dds_compiler_core/u_dds_lut_table/n824_4 )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/n824_s1 .INIT=4'h1;
 LUT4 \u_dds_compiler_core/u_dds_lut_table/n827_s1  (
-	.I0(phase_i[15]),
-	.I1(phase_i[14]),
-	.I2(phase_i[22]),
+	.I0(phase_i_d[15]),
+	.I1(phase_i_d[14]),
+	.I2(phase_i_d[22]),
 	.I3(\u_dds_compiler_core/u_dds_lut_table/n829_4 ),
 	.F(\u_dds_compiler_core/u_dds_lut_table/n827_4 )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/n827_s1 .INIT=16'h00F1;
 LUT4 \u_dds_compiler_core/u_dds_lut_table/n829_s1  (
-	.I0(phase_i[13]),
-	.I1(phase_i[12]),
-	.I2(phase_i[11]),
-	.I3(phase_i[22]),
+	.I0(phase_i_d[13]),
+	.I1(phase_i_d[12]),
+	.I2(phase_i_d[11]),
+	.I3(phase_i_d[22]),
 	.F(\u_dds_compiler_core/u_dds_lut_table/n829_4 )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/n829_s1 .INIT=16'h00FE;
@@ -3073,871 +3391,871 @@ LUT4 \u_dds_compiler_core/u_dds_lut_table/n357_s25  (
 defparam \u_dds_compiler_core/u_dds_lut_table/n357_s25 .INIT=16'h40BF;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_23_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n342_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [23])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_23_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_22_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n343_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [22])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_22_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_21_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n344_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [21])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_21_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_20_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n345_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [20])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_20_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_19_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n346_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [19])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_19_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_18_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n347_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [18])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_18_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_17_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n348_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [17])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_17_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_16_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n349_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [16])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_16_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_15_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n350_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [15])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_15_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_14_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n351_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [14])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_14_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_13_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n352_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [13])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_13_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_12_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n353_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [12])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_12_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_11_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n354_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [11])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_11_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_10_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n355_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [10])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_10_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_9_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n356_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [9])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_9_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_8_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n357_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [8])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_8_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_7_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n358_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [7])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_7_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_6_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n359_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [6])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_6_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_5_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n360_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [5])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_5_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_4_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n361_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [4])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_4_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_3_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n362_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [3])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_3_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_2_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n363_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [2])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_2_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_1_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n364_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [1])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_1_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_0_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n365_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [0])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_0_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_23_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n729_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [23])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_23_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_22_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n730_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [22])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_22_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_21_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n731_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [21])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_21_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_20_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n732_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [20])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_20_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_19_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n733_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [19])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_19_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_18_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n734_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [18])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_18_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_17_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n735_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [17])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_17_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_16_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n736_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [16])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_16_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_15_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n737_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [15])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_15_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_14_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n738_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [14])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_14_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_13_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n739_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [13])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_13_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_12_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n740_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [12])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_12_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_11_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n741_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [11])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_11_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_10_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n742_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [10])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_10_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_9_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n743_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [9])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_9_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_8_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n744_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [8])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_8_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_7_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n745_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [7])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_7_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_6_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n746_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [6])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_6_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_5_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n747_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [5])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_5_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_4_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n748_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [4])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_4_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_3_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n749_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [3])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_3_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_2_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n750_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [2])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_2_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_1_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n751_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [1])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_1_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_sine_0_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n752_21 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_sine [0])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_sine_0_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/lut_addr_10_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n823_4 ),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/lut_addr [10])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/lut_addr_10_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/lut_addr_9_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n824_3 ),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/lut_addr [9])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/lut_addr_9_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/lut_addr_8_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n825_3 ),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/lut_addr [8])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/lut_addr_8_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/lut_addr_7_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n826_3 ),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/lut_addr [7])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/lut_addr_7_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/lut_addr_6_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n827_3 ),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/lut_addr [6])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/lut_addr_6_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/lut_addr_5_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n828_3 ),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/lut_addr [5])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/lut_addr_5_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/lut_addr_4_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n829_3 ),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/lut_addr [4])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/lut_addr_4_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/lut_addr_3_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n830_3 ),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/lut_addr [3])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/lut_addr_3_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/lut_addr_2_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n831_3 ),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/lut_addr [2])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/lut_addr_2_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/lut_addr_1_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n832_3 ),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/lut_addr [1])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/lut_addr_1_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/lut_addr_0_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n833_5 ),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/lut_addr [0])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/lut_addr_0_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_24_s0  (
-	.D(phase_i[24]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[24]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [24])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_24_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_23_s0  (
-	.D(phase_i[23]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[23]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [23])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_23_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_22_s0  (
-	.D(phase_i[22]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[22]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [22])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_22_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_21_s0  (
-	.D(phase_i[21]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[21]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [21])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_21_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_20_s0  (
-	.D(phase_i[20]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[20]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [20])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_20_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_19_s0  (
-	.D(phase_i[19]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[19]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [19])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_19_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_18_s0  (
-	.D(phase_i[18]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[18]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [18])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_18_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_17_s0  (
-	.D(phase_i[17]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[17]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [17])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_17_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_16_s0  (
-	.D(phase_i[16]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[16]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [16])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_16_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_15_s0  (
-	.D(phase_i[15]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[15]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [15])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_15_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_14_s0  (
-	.D(phase_i[14]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[14]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [14])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_14_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_13_s0  (
-	.D(phase_i[13]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[13]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [13])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_13_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_12_s0  (
-	.D(phase_i[12]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[12]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [12])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_12_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_11_s0  (
-	.D(phase_i[11]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[11]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [11])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_11_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_10_s0  (
-	.D(phase_i[10]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[10]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [10])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_10_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_9_s0  (
-	.D(phase_i[9]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[9]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [9])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_9_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_8_s0  (
-	.D(phase_i[8]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[8]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [8])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_8_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_7_s0  (
-	.D(phase_i[7]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[7]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [7])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_7_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_6_s0  (
-	.D(phase_i[6]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[6]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [6])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_6_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_5_s0  (
-	.D(phase_i[5]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[5]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [5])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_5_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_4_s0  (
-	.D(phase_i[4]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[4]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [4])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_4_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_3_s0  (
-	.D(phase_i[3]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[3]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [3])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_3_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_2_s0  (
-	.D(phase_i[2]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[2]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [2])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_2_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_1_s0  (
-	.D(phase_i[1]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[1]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [1])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_1_s0 .INIT=1'b0;
 DFFE \u_dds_compiler_core/u_dds_lut_table/r1_addr_0_s0  (
-	.D(phase_i[0]),
-	.CLK(clk_i),
-	.CE(phase_valid_i),
+	.D(phase_i_d[0]),
+	.CLK(clk_i_d),
+	.CE(phase_valid_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_addr [0])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_addr_0_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/r1_phase_valid_s0  (
-	.D(phase_valid_i),
-	.CLK(clk_i),
+	.D(phase_valid_i_d),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/r1_phase_valid )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/r1_phase_valid_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_10_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [10]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [10])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_10_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_9_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [9]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [9])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_9_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_8_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [8]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [8])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_8_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_7_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [7]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [7])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_7_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_6_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [6]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [6])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_6_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_5_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [5]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [5])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_5_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_4_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [4]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [4])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_4_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_3_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [3]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [3])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_3_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_2_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [2]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [2])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_2_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_1_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [1]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [1])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_1_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_0_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [0]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [0])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0]_0_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_phase_valid_0_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_phase_valid ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/pre_phase_valid [0])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_phase_valid_0_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_10_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [10]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_phase_out [10])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_10_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_9_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [9]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_phase_out [9])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_9_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_8_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [8]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_phase_out [8])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_8_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_7_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [7]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_phase_out [7])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_7_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_6_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [6]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_phase_out [6])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_6_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_5_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [5]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_phase_out [5])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_5_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_4_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [4]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_phase_out [4])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_4_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_3_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [3]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_phase_out [3])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_3_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_2_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [2]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_phase_out [2])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_2_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_1_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [1]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_phase_out [1])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_1_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_0_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[0] [0]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_phase_out [0])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_addr_dx[1]_0_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/pre_phase_valid_1_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/pre_phase_valid [0]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_data_valid )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/pre_phase_valid_1_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_24_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [24]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_cos [24])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_24_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_23_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [23]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_cos [23])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_23_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_22_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [22]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_cos [22])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_22_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_21_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [21]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_cos [21])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_21_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_20_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [20]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_cos [20])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_20_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_19_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [19]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_cos [19])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_19_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_18_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [18]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_cos [18])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_18_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_17_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [17]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_cos [17])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_17_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_16_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [16]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_cos [16])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_16_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_15_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [15]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_cos [15])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_15_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_14_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [14]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_cos [14])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_14_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_13_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [13]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_cos [13])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_13_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_12_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [12]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_cos [12])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_12_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_11_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [11]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_cos [11])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_cos_11_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_24_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [24]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_sin [24])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_24_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_23_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [23]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_sin [23])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_23_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_22_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [22]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_sin [22])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_22_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_21_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [21]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_sin [21])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_21_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_20_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [20]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_sin [20])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_20_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_19_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [19]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_sin [19])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_19_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_18_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [18]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_sin [18])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_18_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_17_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [17]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_sin [17])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_17_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_16_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [16]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_sin [16])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_16_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_15_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [15]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_sin [15])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_15_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_14_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [14]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_sin [14])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_14_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_13_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [13]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_sin [13])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_13_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_12_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [12]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_sin [12])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_12_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_11_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/r1_addr [11]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/addr_dx_sin [11])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/addr_dx_sin_11_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_lut_table/o_cosine_24_s0  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/n341_17 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/w1_cosine [24])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/o_cosine_24_s0 .INIT=1'b0;
 DFFR \u_dds_compiler_core/u_dds_lut_table/o_sine_24_s1  (
 	.D(\u_dds_compiler_core/u_dds_lut_table/addr_dx_sin [24]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.RESET(\u_dds_compiler_core/u_dds_lut_table/o_sine_24_5 ),
 	.Q(\u_dds_compiler_core/w1_sine [24])
 );
@@ -4771,18 +5089,18 @@ MUX2_LUT5 \u_dds_compiler_core/u_dds_lut_table/n751_s23  (
 	.O(\u_dds_compiler_core/u_dds_lut_table/n751_25 )
 );
 LUT1 \u_dds_compiler_core/u_dds_lut_table/n833_s2  (
-	.I0(phase_i[11]),
+	.I0(phase_i_d[11]),
 	.F(\u_dds_compiler_core/u_dds_lut_table/n833_5 )
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/n833_s2 .INIT=2'h1;
 DFF \u_dds_compiler_core/u_dds_lut_table/U_rom_style/dout_23_s0  (
 	.D(VCC),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_lut_table/rom_douta [23])
 );
 defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/dout_23_s0 .INIT=1'b0;
 pROM \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_0_s  (
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.OCE(GND),
 	.CE(VCC),
 	.RESET(GND),
@@ -4857,7 +5175,7 @@ defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_0_s .READ_MO
 defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_0_s .BIT_WIDTH=8;
 defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_0_s .RESET_MODE="SYNC";
 pROM \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_1_s  (
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.OCE(GND),
 	.CE(VCC),
 	.RESET(GND),
@@ -4932,7 +5250,7 @@ defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_1_s .READ_MO
 defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_1_s .BIT_WIDTH=8;
 defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_1_s .RESET_MODE="SYNC";
 pROM \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_2_s  (
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.OCE(GND),
 	.CE(VCC),
 	.RESET(GND),
@@ -5007,7 +5325,7 @@ defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_2_s .READ_MO
 defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_2_s .BIT_WIDTH=8;
 defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_2_s .RESET_MODE="SYNC";
 pROM \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_3_s  (
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.OCE(GND),
 	.CE(VCC),
 	.RESET(GND),
@@ -5082,7 +5400,7 @@ defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_3_s .READ_MO
 defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_3_s .BIT_WIDTH=8;
 defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_3_s .RESET_MODE="SYNC";
 pROM \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_4_s  (
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.OCE(GND),
 	.CE(VCC),
 	.RESET(GND),
@@ -5157,7 +5475,7 @@ defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_4_s .READ_MO
 defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_4_s .BIT_WIDTH=8;
 defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_4_s .RESET_MODE="SYNC";
 pROM \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_5_s  (
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.OCE(GND),
 	.CE(VCC),
 	.RESET(GND),
@@ -5233,1532 +5551,1532 @@ defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_5_s .BIT_WID
 defparam \u_dds_compiler_core/u_dds_lut_table/U_rom_style/rom_rom_0_5_s .RESET_MODE="SYNC";
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_24_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [24]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [24])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_24_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_23_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [23]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [23])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_23_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_22_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [22]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [22])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_22_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_21_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [21]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [21])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_21_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_20_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [20]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [20])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_20_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_19_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [19]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [19])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_19_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_18_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [18]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [18])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_18_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_17_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [17]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [17])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_17_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_16_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [16]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [16])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_16_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_15_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [15]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [15])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_15_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_14_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [14]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [14])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_14_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_13_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [13]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [13])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_13_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_12_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [12]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [12])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_12_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_11_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [11]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [11])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_11_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_10_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [10]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [10])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_10_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_9_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [9]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [9])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_9_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_8_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [8]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [8])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_8_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_7_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [7]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [7])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_7_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_6_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [6]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [6])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_6_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_5_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [5]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [5])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_5_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_4_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [4]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [4])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_4_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_3_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [3]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [3])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_3_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_2_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [2]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [2])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_2_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_1_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [1]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [1])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_1_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_0_s0  (
 	.D(\u_dds_compiler_core/w1_cosine [0]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [0])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine_0_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_24_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [24]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [24])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_24_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_23_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [23]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [23])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_23_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_22_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [22]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [22])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_22_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_21_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [21]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [21])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_21_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_20_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [20]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [20])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_20_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_19_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [19]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [19])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_19_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_18_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [18]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [18])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_18_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_17_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [17]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [17])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_17_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_16_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [16]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [16])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_16_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_15_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [15]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [15])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_15_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_14_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [14]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [14])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_14_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_13_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [13]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [13])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_13_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_12_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [12]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [12])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_12_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_11_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [11]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [11])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_11_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_10_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [10]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [10])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_10_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_9_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [9]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [9])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_9_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_8_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [8]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [8])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_8_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_7_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [7]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [7])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_7_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_6_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [6]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [6])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_6_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_5_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [5]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [5])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_5_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_4_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [4]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [4])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_4_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_3_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [3]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [3])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_3_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_2_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [2]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [2])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_2_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_1_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [1]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [1])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_1_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_0_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [0]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [0])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_cosine_0_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_24_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [24]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [24])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_24_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_23_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [23]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [23])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_23_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_22_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [22]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [22])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_22_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_21_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [21]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [21])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_21_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_20_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [20]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [20])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_20_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_19_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [19]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [19])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_19_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_18_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [18]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [18])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_18_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_17_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [17]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [17])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_17_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_16_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [16]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [16])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_16_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_15_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [15]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [15])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_15_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_14_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [14]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [14])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_14_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_13_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [13]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [13])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_13_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_12_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [12]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [12])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_12_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_11_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [11]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [11])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_11_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_10_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [10]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [10])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_10_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_9_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [9]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [9])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_9_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_8_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [8]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [8])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_8_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_7_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [7]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [7])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_7_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_6_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [6]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [6])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_6_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_5_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [5]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [5])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_5_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_4_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [4]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [4])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_4_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_3_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [3]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [3])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_3_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_2_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [2]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [2])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_2_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_1_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [1]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [1])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_1_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_0_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_cosine [0]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [0])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_cosine_0_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_24_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [24]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [24])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_24_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_23_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [23]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [23])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_23_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_22_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [22]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [22])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_22_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_21_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [21]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [21])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_21_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_20_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [20]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [20])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_20_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_19_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [19]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [19])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_19_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_18_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [18]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [18])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_18_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_17_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [17]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [17])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_17_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_16_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [16]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [16])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_16_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_15_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [15]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [15])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_15_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_14_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [14]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [14])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_14_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_13_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [13]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [13])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_13_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_12_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [12]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [12])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_12_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_11_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [11]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [11])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_11_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_10_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [10]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [10])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_10_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_9_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [9]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [9])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_9_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_8_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [8]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [8])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_8_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_7_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [7]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [7])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_7_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_6_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [6]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [6])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_6_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_5_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [5]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [5])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_5_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_4_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [4]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [4])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_4_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_3_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [3]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [3])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_3_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_2_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [2]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [2])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_2_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_1_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [1]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [1])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_1_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_0_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_cosine [0]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_cosine [0])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_cosine_0_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_24_s0  (
 	.D(\u_dds_compiler_core/w1_sine [24]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [24])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_24_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_23_s0  (
 	.D(\u_dds_compiler_core/w1_sine [23]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [23])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_23_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_22_s0  (
 	.D(\u_dds_compiler_core/w1_sine [22]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [22])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_22_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_21_s0  (
 	.D(\u_dds_compiler_core/w1_sine [21]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [21])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_21_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_20_s0  (
 	.D(\u_dds_compiler_core/w1_sine [20]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [20])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_20_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_19_s0  (
 	.D(\u_dds_compiler_core/w1_sine [19]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [19])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_19_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_18_s0  (
 	.D(\u_dds_compiler_core/w1_sine [18]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [18])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_18_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_17_s0  (
 	.D(\u_dds_compiler_core/w1_sine [17]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [17])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_17_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_16_s0  (
 	.D(\u_dds_compiler_core/w1_sine [16]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [16])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_16_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_15_s0  (
 	.D(\u_dds_compiler_core/w1_sine [15]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [15])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_15_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_14_s0  (
 	.D(\u_dds_compiler_core/w1_sine [14]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [14])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_14_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_13_s0  (
 	.D(\u_dds_compiler_core/w1_sine [13]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [13])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_13_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_12_s0  (
 	.D(\u_dds_compiler_core/w1_sine [12]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [12])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_12_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_11_s0  (
 	.D(\u_dds_compiler_core/w1_sine [11]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [11])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_11_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_10_s0  (
 	.D(\u_dds_compiler_core/w1_sine [10]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [10])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_10_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_9_s0  (
 	.D(\u_dds_compiler_core/w1_sine [9]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [9])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_9_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_8_s0  (
 	.D(\u_dds_compiler_core/w1_sine [8]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [8])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_8_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_7_s0  (
 	.D(\u_dds_compiler_core/w1_sine [7]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [7])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_7_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_6_s0  (
 	.D(\u_dds_compiler_core/w1_sine [6]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [6])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_6_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_5_s0  (
 	.D(\u_dds_compiler_core/w1_sine [5]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [5])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_5_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_4_s0  (
 	.D(\u_dds_compiler_core/w1_sine [4]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [4])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_4_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_3_s0  (
 	.D(\u_dds_compiler_core/w1_sine [3]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [3])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_3_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_2_s0  (
 	.D(\u_dds_compiler_core/w1_sine [2]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [2])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_2_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_1_s0  (
 	.D(\u_dds_compiler_core/w1_sine [1]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [1])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_1_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_0_s0  (
 	.D(\u_dds_compiler_core/w1_sine [0]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [0])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_sine_0_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_24_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [24]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [24])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_24_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_23_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [23]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [23])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_23_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_22_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [22]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [22])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_22_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_21_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [21]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [21])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_21_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_20_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [20]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [20])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_20_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_19_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [19]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [19])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_19_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_18_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [18]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [18])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_18_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_17_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [17]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [17])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_17_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_16_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [16]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [16])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_16_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_15_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [15]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [15])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_15_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_14_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [14]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [14])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_14_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_13_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [13]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [13])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_13_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_12_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [12]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [12])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_12_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_11_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [11]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [11])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_11_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_10_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [10]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [10])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_10_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_9_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [9]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [9])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_9_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_8_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [8]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [8])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_8_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_7_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [7]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [7])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_7_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_6_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [6]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [6])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_6_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_5_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [5]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [5])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_5_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_4_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [4]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [4])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_4_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_3_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [3]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [3])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_3_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_2_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [2]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [2])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_2_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_1_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [1]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [1])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_1_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_0_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [0]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [0])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_sine_0_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_24_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [24]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [24])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_24_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_23_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [23]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [23])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_23_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_22_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [22]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [22])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_22_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_21_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [21]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [21])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_21_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_20_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [20]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [20])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_20_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_19_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [19]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [19])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_19_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_18_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [18]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [18])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_18_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_17_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [17]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [17])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_17_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_16_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [16]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [16])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_16_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_15_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [15]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [15])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_15_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_14_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [14]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [14])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_14_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_13_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [13]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [13])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_13_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_12_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [12]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [12])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_12_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_11_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [11]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [11])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_11_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_10_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [10]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [10])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_10_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_9_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [9]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [9])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_9_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_8_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [8]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [8])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_8_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_7_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [7]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [7])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_7_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_6_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [6]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [6])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_6_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_5_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [5]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [5])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_5_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_4_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [4]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [4])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_4_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_3_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [3]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [3])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_3_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_2_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [2]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [2])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_2_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_1_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [1]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [1])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_1_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_0_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_sine [0]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [0])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_sine_0_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_24_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [24]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [24])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_24_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_23_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [23]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [23])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_23_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_22_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [22]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [22])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_22_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_21_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [21]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [21])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_21_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_20_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [20]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [20])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_20_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_19_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [19]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [19])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_19_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_18_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [18]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [18])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_18_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_17_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [17]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [17])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_17_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_16_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [16]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [16])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_16_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_15_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [15]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [15])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_15_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_14_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [14]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [14])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_14_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_13_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [13]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [13])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_13_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_12_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [12]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [12])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_12_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_11_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [11]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [11])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_11_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_10_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [10]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [10])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_10_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_9_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [9]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [9])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_9_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_8_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [8]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [8])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_8_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_7_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [7]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [7])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_7_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_6_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [6]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [6])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_6_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_5_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [5]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [5])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_5_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_4_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [4]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [4])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_4_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_3_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [3]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [3])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_3_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_2_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [2]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [2])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_2_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_1_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [1]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [1])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_1_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_0_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_sine [0]),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_sine [0])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_sine_0_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r1_phase_valid_s0  (
 	.D(\u_dds_compiler_core/w1_data_valid ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r1_phase_valid )
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r1_phase_valid_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r2_phase_valid_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r1_phase_valid ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r2_phase_valid )
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r2_phase_valid_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r3_phase_valid_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r2_phase_valid ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r3_phase_valid )
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r3_phase_valid_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/r4_phase_valid_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r3_phase_valid ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/r4_phase_valid )
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/r4_phase_valid_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_data_valid_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/r4_phase_valid ),
-	.CLK(clk_i),
-	.Q(data_valid_o)
+	.CLK(clk_i_d),
+	.Q(data_valid_o_d)
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_data_valid_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_24_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n547_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[24])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[24])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_24_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_23_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n548_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[23])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[23])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_23_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_22_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n549_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[22])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[22])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_22_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_21_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n550_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[21])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[21])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_21_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_20_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n551_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[20])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[20])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_20_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_19_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n552_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[19])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[19])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_19_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_18_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n553_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[18])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[18])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_18_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_17_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n554_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[17])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[17])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_17_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_16_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n555_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[16])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[16])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_16_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_15_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n556_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[15])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[15])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_15_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_14_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n557_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[14])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[14])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_14_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_13_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n558_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[13])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[13])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_13_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_12_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n559_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[12])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[12])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_12_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_11_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n560_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[11])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[11])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_11_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_10_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n561_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[10])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[10])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_10_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_9_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n562_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[9])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[9])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_9_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_8_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n563_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[8])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[8])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_8_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_7_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n564_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[7])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[7])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_7_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_6_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n565_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[6])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[6])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_6_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_5_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n566_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[5])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[5])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_5_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_4_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n567_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[4])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[4])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_4_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_3_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n568_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[3])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[3])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_3_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_2_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n569_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[2])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[2])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_2_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_1_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n570_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[1])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[1])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_1_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_sine_0_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n571_1 ),
-	.CLK(clk_i),
-	.Q(sine_o[0])
+	.CLK(clk_i_d),
+	.Q(sine_o_d[0])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_sine_0_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_24_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n598_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[24])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[24])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_24_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_23_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n599_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[23])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[23])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_23_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_22_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n600_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[22])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[22])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_22_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_21_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n601_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[21])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[21])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_21_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_20_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n602_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[20])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[20])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_20_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_19_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n603_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[19])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[19])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_19_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_18_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n604_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[18])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[18])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_18_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_17_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n605_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[17])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[17])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_17_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_16_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n606_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[16])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[16])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_16_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_15_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n607_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[15])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[15])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_15_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_14_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n608_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[14])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[14])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_14_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_13_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n609_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[13])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[13])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_13_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_12_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n610_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[12])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[12])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_12_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_11_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n611_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[11])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[11])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_11_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_10_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n612_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[10])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[10])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_10_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_9_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n613_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[9])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[9])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_9_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_8_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n614_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[8])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[8])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_8_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_7_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n615_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[7])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[7])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_7_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_6_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n616_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[6])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[6])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_6_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_5_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n617_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[5])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[5])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_5_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_4_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n618_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[4])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[4])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_4_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_3_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n619_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[3])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[3])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_3_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_2_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n620_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[2])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[2])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_2_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_1_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n621_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[1])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[1])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_1_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_0_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/n622_2 ),
-	.CLK(clk_i),
-	.Q(cosine_o[0])
+	.CLK(clk_i_d),
+	.Q(cosine_o_d[0])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/o_cosine_0_s0 .INIT=1'b0;
 ALU \u_dds_compiler_core/u_dds_taylor_corr/n571_s  (
@@ -7215,7 +7533,7 @@ MULT18X18 \u_dds_compiler_core/u_dds_taylor_corr/dds10_multi/mult18x18_inst  (
 	.ASIGN(VCC),
 	.BSIGN(VCC),
 	.CE(VCC),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.RESET(GND),
 	.ASEL(GND),
 	.BSEL(GND),
@@ -7239,7 +7557,7 @@ MULT36X36 \u_dds_compiler_core/u_dds_taylor_corr/dds1_multi/mult36x36_inst  (
 	.ASIGN(VCC),
 	.BSIGN(VCC),
 	.CE(VCC),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.RESET(GND),
 	.A({GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, \u_dds_compiler_core/u_dds_taylor_corr/delta [22:0]}),
 	.B({\u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_cosine [24:0]}),
@@ -7256,7 +7574,7 @@ MULT36X36 \u_dds_compiler_core/u_dds_taylor_corr/dds2_multi/mult36x36_inst  (
 	.ASIGN(VCC),
 	.BSIGN(VCC),
 	.CE(VCC),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.RESET(GND),
 	.A({GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, \u_dds_compiler_core/u_dds_taylor_corr/delta [22:0]}),
 	.B({\u_dds_compiler_core/u_dds_taylor_corr/r1_sine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_sine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_sine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_sine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_sine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_sine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_sine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_sine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_sine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_sine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_sine [24], \u_dds_compiler_core/u_dds_taylor_corr/r1_sine [24:0]}),
@@ -7535,85 +7853,85 @@ LUT3 \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/n139_s2  (
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/n139_s2 .INIT=8'h80;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_46_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/n133_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_sin_rnd [12])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_46_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_45_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/n134_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_sin_rnd [11])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_45_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_44_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/n135_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_sin_rnd [10])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_44_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_43_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/n136_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_sin_rnd [9])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_43_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_42_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/n137_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_sin_rnd [8])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_42_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_41_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/n138_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_sin_rnd [7])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_41_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_40_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/n139_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_sin_rnd [6])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_40_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_39_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/n140_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_sin_rnd [5])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_39_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_38_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/n141_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_sin_rnd [4])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_38_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_37_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/n142_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_sin_rnd [3])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_37_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_36_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/n143_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_sin_rnd [2])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_36_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_35_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/n144_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_sin_rnd [1])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_35_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_34_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/n145_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_sin_rnd [0])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_34_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_47_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/n132_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_sin_rnd [13])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u1_symmetric_rounding/dout_47_s0 .INIT=1'b0;
@@ -7908,85 +8226,85 @@ LUT4 \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/n138_s3  (
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/n138_s3 .INIT=16'h8000;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_46_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/n133_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_cos_rnd [12])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_46_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_45_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/n134_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_cos_rnd [11])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_45_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_44_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/n135_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_cos_rnd [10])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_44_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_43_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/n136_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_cos_rnd [9])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_43_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_42_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/n137_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_cos_rnd [8])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_42_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_41_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/n138_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_cos_rnd [7])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_41_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_40_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/n139_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_cos_rnd [6])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_40_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_39_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/n140_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_cos_rnd [5])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_39_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_38_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/n141_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_cos_rnd [4])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_38_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_37_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/n142_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_cos_rnd [3])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_37_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_36_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/n143_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_cos_rnd [2])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_36_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_35_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/n144_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_cos_rnd [1])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_35_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_34_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/n145_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_cos_rnd [0])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_34_s0 .INIT=1'b0;
 DFF \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_47_s0  (
 	.D(\u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/n132_3 ),
-	.CLK(clk_i),
+	.CLK(clk_i_d),
 	.Q(\u_dds_compiler_core/u_dds_taylor_corr/delta_cos_rnd [13])
 );
 defparam \u_dds_compiler_core/u_dds_taylor_corr/u2_symmetric_rounding/dout_47_s0 .INIT=1'b0;

@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="dds_top" Register="423" Alu="50" Lut="376" MULT18X18="1" MULT36X36="2" ALU54D="2" Bsram="6" T_Register="423(423)" T_Alu="50(50)" T_Lut="376(376)" T_MULT18X18="1(1)" T_MULT36X36="2(2)" T_ALU54D="2(2)" T_Bsram="6(6)"/>
+<Module name="top" Register="1" Lut="18" T_Register="767(1)" T_Alu="50(0)" T_Lut="389(18)" T_MULT18X18="1(0)" T_MULT36X36="2(0)" T_ALU54D="2(0)" T_Bsram="6(0)">
+ <SubModule name="dds_ii_0" Register="766" Alu="50" Lut="371" MULT18X18="1" MULT36X36="2" ALU54D="2" Bsram="6" T_Register="766(766)" T_Alu="50(50)" T_Lut="371(371)" T_MULT18X18="1(1)" T_MULT36X36="2(2)" T_ALU54D="2(2)" T_Bsram="6(6)"/>
+</Module>

@@ -5,12 +5,12 @@
 //Part Number: GW1NR-LV9QN88PC6/I5
 //Device: GW1NR-9
 //Device Version: C
-//Created Time: Thu Dec  5 21:25:37 2024
+//Created Time: Sun Dec  8 19:07:04 2024
 
 //Change the instance name and port connections to the signal names
 //--------Copy here to design--------
 
-	dds_top your_instance_name(
+	DDS_II_Top your_instance_name(
 		.clk_i(clk_i), //input clk_i
 		.rst_n_i(rst_n_i), //input rst_n_i
 		.phase_valid_i(phase_valid_i), //input phase_valid_i

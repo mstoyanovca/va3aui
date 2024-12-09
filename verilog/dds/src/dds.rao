@@ -1,0 +1,138 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Standard</Mode>
+    <AoCore index="0" sample_clock="clk_i" trig_type="0" storage_depth="1024" window_num="1" capture_amount="1024" implementation="0" trigger_pos="0" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
+        <SignalList>
+            <Signal capture_enable="true">dds_ii_0/clk_i</Signal>
+            <Signal capture_enable="true">dds_ii_0/rst_n_i</Signal>
+            <Signal capture_enable="true">dds_ii_0/phase_valid_i</Signal>
+            <Signal capture_enable="true">dds_ii_0/data_valid_o</Signal>
+            <Bus capture_enable="true" name="dds_ii_0/phase_i[24:0]">
+                <Signal>dds_ii_0/phase_i[24]</Signal>
+                <Signal>dds_ii_0/phase_i[23]</Signal>
+                <Signal>dds_ii_0/phase_i[22]</Signal>
+                <Signal>dds_ii_0/phase_i[21]</Signal>
+                <Signal>dds_ii_0/phase_i[20]</Signal>
+                <Signal>dds_ii_0/phase_i[19]</Signal>
+                <Signal>dds_ii_0/phase_i[18]</Signal>
+                <Signal>dds_ii_0/phase_i[17]</Signal>
+                <Signal>dds_ii_0/phase_i[16]</Signal>
+                <Signal>dds_ii_0/phase_i[15]</Signal>
+                <Signal>dds_ii_0/phase_i[14]</Signal>
+                <Signal>dds_ii_0/phase_i[13]</Signal>
+                <Signal>dds_ii_0/phase_i[12]</Signal>
+                <Signal>dds_ii_0/phase_i[11]</Signal>
+                <Signal>dds_ii_0/phase_i[10]</Signal>
+                <Signal>dds_ii_0/phase_i[9]</Signal>
+                <Signal>dds_ii_0/phase_i[8]</Signal>
+                <Signal>dds_ii_0/phase_i[7]</Signal>
+                <Signal>dds_ii_0/phase_i[6]</Signal>
+                <Signal>dds_ii_0/phase_i[5]</Signal>
+                <Signal>dds_ii_0/phase_i[4]</Signal>
+                <Signal>dds_ii_0/phase_i[3]</Signal>
+                <Signal>dds_ii_0/phase_i[2]</Signal>
+                <Signal>dds_ii_0/phase_i[1]</Signal>
+                <Signal>dds_ii_0/phase_i[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="dds_ii_0/sine_o[24:0]">
+                <Signal>dds_ii_0/sine_o[24]</Signal>
+                <Signal>dds_ii_0/sine_o[23]</Signal>
+                <Signal>dds_ii_0/sine_o[22]</Signal>
+                <Signal>dds_ii_0/sine_o[21]</Signal>
+                <Signal>dds_ii_0/sine_o[20]</Signal>
+                <Signal>dds_ii_0/sine_o[19]</Signal>
+                <Signal>dds_ii_0/sine_o[18]</Signal>
+                <Signal>dds_ii_0/sine_o[17]</Signal>
+                <Signal>dds_ii_0/sine_o[16]</Signal>
+                <Signal>dds_ii_0/sine_o[15]</Signal>
+                <Signal>dds_ii_0/sine_o[14]</Signal>
+                <Signal>dds_ii_0/sine_o[13]</Signal>
+                <Signal>dds_ii_0/sine_o[12]</Signal>
+                <Signal>dds_ii_0/sine_o[11]</Signal>
+                <Signal>dds_ii_0/sine_o[10]</Signal>
+                <Signal>dds_ii_0/sine_o[9]</Signal>
+                <Signal>dds_ii_0/sine_o[8]</Signal>
+                <Signal>dds_ii_0/sine_o[7]</Signal>
+                <Signal>dds_ii_0/sine_o[6]</Signal>
+                <Signal>dds_ii_0/sine_o[5]</Signal>
+                <Signal>dds_ii_0/sine_o[4]</Signal>
+                <Signal>dds_ii_0/sine_o[3]</Signal>
+                <Signal>dds_ii_0/sine_o[2]</Signal>
+                <Signal>dds_ii_0/sine_o[1]</Signal>
+                <Signal>dds_ii_0/sine_o[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="dds_ii_0/cosine_o[24:0]">
+                <Signal>dds_ii_0/cosine_o[24]</Signal>
+                <Signal>dds_ii_0/cosine_o[23]</Signal>
+                <Signal>dds_ii_0/cosine_o[22]</Signal>
+                <Signal>dds_ii_0/cosine_o[21]</Signal>
+                <Signal>dds_ii_0/cosine_o[20]</Signal>
+                <Signal>dds_ii_0/cosine_o[19]</Signal>
+                <Signal>dds_ii_0/cosine_o[18]</Signal>
+                <Signal>dds_ii_0/cosine_o[17]</Signal>
+                <Signal>dds_ii_0/cosine_o[16]</Signal>
+                <Signal>dds_ii_0/cosine_o[15]</Signal>
+                <Signal>dds_ii_0/cosine_o[14]</Signal>
+                <Signal>dds_ii_0/cosine_o[13]</Signal>
+                <Signal>dds_ii_0/cosine_o[12]</Signal>
+                <Signal>dds_ii_0/cosine_o[11]</Signal>
+                <Signal>dds_ii_0/cosine_o[10]</Signal>
+                <Signal>dds_ii_0/cosine_o[9]</Signal>
+                <Signal>dds_ii_0/cosine_o[8]</Signal>
+                <Signal>dds_ii_0/cosine_o[7]</Signal>
+                <Signal>dds_ii_0/cosine_o[6]</Signal>
+                <Signal>dds_ii_0/cosine_o[5]</Signal>
+                <Signal>dds_ii_0/cosine_o[4]</Signal>
+                <Signal>dds_ii_0/cosine_o[3]</Signal>
+                <Signal>dds_ii_0/cosine_o[2]</Signal>
+                <Signal>dds_ii_0/cosine_o[1]</Signal>
+                <Signal>dds_ii_0/cosine_o[0]</Signal>
+            </Bus>
+        </SignalList>
+        <Triggers>
+            <Trigger index="0">
+                <SignalList>
+                    <Signal>sin_data[0]</Signal>
+                </SignalList>
+            </Trigger>
+            <Trigger index="1"/>
+            <Trigger index="2"/>
+            <Trigger index="3"/>
+            <Trigger index="4"/>
+            <Trigger index="5"/>
+            <Trigger index="6"/>
+            <Trigger index="7"/>
+            <Trigger index="8"/>
+            <Trigger index="9"/>
+            <Trigger index="10"/>
+            <Trigger index="11"/>
+            <Trigger index="12"/>
+            <Trigger index="13"/>
+            <Trigger index="14"/>
+            <Trigger index="15"/>
+        </Triggers>
+        <MatchUnits>
+            <MatchUnit index="0" enabled="1" match_type="1" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="R" value1="0" trigger="0"/>
+            <MatchUnit index="1" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="2" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="3" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="4" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="5" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="6" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="7" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="8" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="9" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="10" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="11" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="12" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="13" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="14" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="15" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+        </MatchUnits>
+        <Expressions type="Static">
+            <Expression>M0</Expression>
+        </Expressions>
+    </AoCore>
+    <GAO_ID>1101010000100011</GAO_ID>
+</GAO_CONFIG>

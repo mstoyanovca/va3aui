@@ -1,19 +1,29 @@
 [
  {
-  "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/dds.v",
-  "InstLine" : 3129,
-  "InstName" : "dds_top",
-  "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/dds.v",
-  "ModuleLine" : 3129,
-  "ModuleName" : "dds_top",
+  "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/top.v",
+  "InstLine" : 3,
+  "InstName" : "top",
+  "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/top.v",
+  "ModuleLine" : 3,
+  "ModuleName" : "top",
   "SubInsts" : [
    {
-    "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/dds.v",
-    "InstLine" : 3151,
-    "InstName" : "u_dds_compiler_core",
-    "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/dds.v",
-    "ModuleLine" : 12,
-    "ModuleName" : "~dds_ii_core.dds_top"
+    "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/top.v",
+    "InstLine" : 19,
+    "InstName" : "dds_ii_0",
+    "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/dds_ii.v",
+    "ModuleLine" : 4020,
+    "ModuleName" : "dds_ii",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/dds_ii.v",
+      "InstLine" : 4041,
+      "InstName" : "u_dds_compiler_core",
+      "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/dds_ii.v",
+      "ModuleLine" : 12,
+      "ModuleName" : "~dds_ii_core.dds_ii"
+     }
+    ]
    }
   ]
  }
