@@ -4027,10 +4027,9 @@ module dds_ii (
     data_valid_o
 );
 
-input clk_i;
-input rst_n_i;
-input phase_valid_i;
+input clk_i, rst_n_i, phase_valid_i;
 input [24:0] phase_i;
+
 output [24:0] cosine_o;
 output [24:0] sine_o;
 output data_valid_o;

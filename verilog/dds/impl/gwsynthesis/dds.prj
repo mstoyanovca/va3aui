@@ -5,6 +5,8 @@
     <Device id="GW1NR-9C" package="QFN88P" speed="6" partNumber="GW1NR-LV9QN88PC6/I5"/>
     <FileList>
         <File path="C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\dds_ii.v" type="verilog"/>
+        <File path="C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\qd.v" type="verilog"/>
+        <File path="C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\sdm.v" type="verilog"/>
         <File path="C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\top.v" type="verilog"/>
     </FileList>
     <OptionList>

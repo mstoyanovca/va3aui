@@ -1,10 +1,14 @@
 `timescale 1ps/1ps
 
 module top (
-    input clk_i,  // 62.5MHz
-    input rst_n_i,
-    output led_o
+    clk_i,  // 62.5MHz
+    rst_n_i,
+    led_o_0,
+    led_o_1
 );
+
+input clk_i, rst_n_i;
+output led_o_0, led_o_1;
 
 reg [24:0] phase_i = 25'd0;
 
@@ -14,6 +18,7 @@ wire data_valid;
 
 always @(posedge clk_i) begin
     if(!rst_n_i) phase_i <= 25'd3797825;  // 7.074MHz
+    else phase_i <= 25'd0;
 end
 
 dds_ii dds_ii_0 (
@@ -26,6 +31,7 @@ dds_ii dds_ii_0 (
     .data_valid_o(data_valid)
 );
 
-assign led_o = &sin_data | &cos_data;
+assign led_o_0 = data_valid;
+assign led_o_1 = &sin_data | &cos_data;
 
 endmodule

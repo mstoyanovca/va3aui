@@ -6,6 +6,14 @@
    "Type" : "verilog"
   },
   {
+   "Path" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/qd.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/sdm.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/dds/src/top.v",
    "Type" : "verilog"
   }

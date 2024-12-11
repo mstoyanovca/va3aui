@@ -1,6 +1,8 @@
 GowinSynthesis start
 Running parser ...
 Analyzing Verilog file 'C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\dds_ii.v'
+Analyzing Verilog file 'C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\qd.v'
+Analyzing Verilog file 'C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\sdm.v'
 Analyzing Verilog file 'C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\top.v'
 Compiling module 'top'("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\top.v":3)
 Compiling module 'dds_ii'("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\dds\src\dds_ii.v":4020)
