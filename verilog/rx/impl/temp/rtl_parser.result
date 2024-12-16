@@ -1,0 +1,120 @@
+[
+ {
+  "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
+  "InstLine" : 1,
+  "InstName" : "top",
+  "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "top",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
+    "InstLine" : 21,
+    "InstName" : "adc",
+    "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/dds.v",
+    "ModuleLine" : 1444,
+    "ModuleName" : "dds",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/dds.v",
+      "InstLine" : 1464,
+      "InstName" : "dds_inst",
+      "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/dds.v",
+      "ModuleLine" : 11,
+      "ModuleName" : "~DDS.dds"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
+    "InstLine" : 48,
+    "InstName" : "vfo",
+    "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/dds_ii.v",
+    "ModuleLine" : 2981,
+    "ModuleName" : "dds_ii",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/dds_ii.v",
+      "InstLine" : 2997,
+      "InstName" : "dds_ii_inst",
+      "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/dds_ii.v",
+      "ModuleLine" : 11,
+      "ModuleName" : "~dds_ii_core.dds_ii"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
+    "InstLine" : 65,
+    "InstName" : "mixer_i",
+    "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/integer_multiplier.v",
+    "ModuleLine" : 3004,
+    "ModuleName" : "integer_multiplier",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/integer_multiplier.v",
+      "InstLine" : 3017,
+      "InstName" : "integer_multiplier_inst",
+      "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/integer_multiplier.v",
+      "ModuleLine" : 11,
+      "ModuleName" : "(integer_multiplier)/(integer_multiplier)"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
+    "InstLine" : 71,
+    "InstName" : "mixer_q",
+    "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/integer_multiplier.v",
+    "ModuleLine" : 3004,
+    "ModuleName" : "integer_multiplier",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/integer_multiplier.v",
+      "InstLine" : 3017,
+      "InstName" : "integer_multiplier_inst",
+      "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/integer_multiplier.v",
+      "ModuleLine" : 11,
+      "ModuleName" : "(integer_multiplier)/(integer_multiplier)"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
+    "InstLine" : 81,
+    "InstName" : "cic_filter_i",
+    "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/cic_filter.v",
+    "ModuleLine" : 4755,
+    "ModuleName" : "cic_filter",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/cic_filter.v",
+      "InstLine" : 4771,
+      "InstName" : "cic_filter_inst",
+      "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/cic_filter.v",
+      "ModuleLine" : 11,
+      "ModuleName" : "~CIC_Filter.cic_filter"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
+    "InstLine" : 88,
+    "InstName" : "cic_filter_q",
+    "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/cic_filter.v",
+    "ModuleLine" : 4755,
+    "ModuleName" : "cic_filter",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/cic_filter.v",
+      "InstLine" : 4771,
+      "InstName" : "cic_filter_inst",
+      "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/cic_filter.v",
+      "ModuleLine" : 11,
+      "ModuleName" : "~CIC_Filter.cic_filter"
+     }
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,36 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\dds.v'
+Analyzing Verilog file 'C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\top.v'
+Analyzing Verilog file 'C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\dds_ii.v'
+Analyzing Verilog file 'C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\integer_multiplier.v'
+Analyzing Verilog file 'C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\cic_filter.v'
+Compiling module 'top'("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\top.v":1)
+Compiling module 'dds'("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\dds.v":1444)
+Compiling module '**'("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\dds.v":1437)
+Compiling module 'dds_ii'("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\dds_ii.v":2981)
+Compiling module '**'("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\dds_ii.v":2971)
+Compiling module 'integer_multiplier'("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\integer_multiplier.v":3004)
+Compiling module '**'("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\integer_multiplier.v":3002)
+Compiling module 'cic_filter'("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\cic_filter.v":4755)
+Compiling module '**'("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\cic_filter.v":4751)
+NOTE  (EX0101) : Current top module is "top"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\impl\gwsynthesis\rx.vg" completed
+[100%] Generate report file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\impl\gwsynthesis\rx_syn.rpt.html" completed
+GowinSynthesis finish
