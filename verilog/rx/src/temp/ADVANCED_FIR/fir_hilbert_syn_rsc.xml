@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Module name="fir_hilbert" Register="1456" Alu="682" Lut="992" MULT18X18="11" Ssram="139" T_Register="1456(1456)" T_Alu="682(682)" T_Lut="992(992)" T_MULT18X18="11(11)" T_Ssram="139(139)"/>

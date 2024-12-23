@@ -8,6 +8,3 @@ for decimation:
 for interpolation:
 - FIR filter
 - CIC filter
-
-
-Tang Nano 20K - GW2AR-18 QN88
