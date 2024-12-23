@@ -9,38 +9,17 @@ input clk_i;
 input rstn_i;
 output led_0;
 
-// adc:
-reg write_en;
-reg [15:0] addr_i;
-reg [24:0] data_i;
+// ADC:
 wire [11:0] adc_o;
 
-/* this module simulates the integer stream from the ADC
-simulates 1kHz FT8 signal at 7.074MHz
-FT8 is USB, it comes to a 7.075MHz sine */
-dds adc (
-  .clk_i(clk_i),
-  .rstn_i(rstn_i),
-  .write_en(write_en),
-  .addr_i(addr_i),
-  .data_i(data_i),
-  .data_o(adc_o)
+// this module simulates integer stream from the ADC:
+adc adc_0(
+    .clk_i(clk_i),
+    .rstn_i(rstn_i),
+    .adc_o(adc_o)
 );
 
-initial @(posedge clk_i) begin
-    if (!rstn_i) begin
-        write_en = 1;
-        addr_i = 8'h10;       // waveform register
-        data_i = 4'b0000;     // sine
-        addr_i = 8'h20;       // POFF
-        data_i = 25'd0;
-        addr_i = 8'h30;       // PINC
-        data_i = 25'h73EAB3;  // 7.075MHz
-        write_en = 0;
-    end
-end
-
-// vfo:
+// VFO:
 reg [24:0] phase_i;
 wire [19:0] sine_o;
 wire [19:0] cosine_o;
@@ -54,6 +33,7 @@ dds_ii vfo (
 
 always @(posedge clk_i) begin
     if (!rstn_i) begin
+        // TODO: this will be read from an encoder:
         phase_i = 25'h39F341;  // 7.074MHz
     end
 end
@@ -74,9 +54,9 @@ integer_multiplier mixer_q (
   .mixer_o(mixer_o_q)
 );
 
-// cic filters:
-wire [67:0] cic_o_i;
-wire [67:0] cic_o_q;
+// 89 times CIC decimators I and Q:
+wire [52:0] cic_o_i;
+wire [52:0] cic_o_q;
 
 cic_filter cic_filter_i (
   clk_i,
@@ -92,6 +72,52 @@ cic_filter cic_filter_q (
   cic_o_q
 );
 
-assign led_0 = &cic_o_i | &cic_o_q;
+// 64 to 16 bit data width converters I and Q:
+wire signed [15:0] cic16_o_i;
+wire signed [15:0] cic16_o_q;
+
+data_width_converter data_width_converter_i(
+    .clk_i(clk_i),
+    .rstn_i(rstn_i),
+    .data_i(cic_o_i),
+    .data_o(cic16_o_i)
+);
+
+data_width_converter data_width_converter_q(
+    .clk_i(clk_i),
+    .rstn_i(rstn_i),
+    .data_i(cic_o_q),
+    .data_o(cic16_o_q)
+);
+
+// 16 times FIR decimators I and Q:
+wire signed [15:0] fir_data_o_i;
+wire signed [15:0] fir_data_o_q;
+
+fir_decimator fir_decimator_i(
+    .clk_i(clk_i),
+    .rstn_i(rstn_i),
+    .fir_data_i(cic16_o_i),
+    .fir_data_o(fir_data_o_i)
+);
+
+fir_decimator fir_decimator_q(
+    .clk_i(clk_i),
+    .rstn_i(rstn_i),
+    .fir_data_i(cic16_o_q),
+    .fir_data_o(fir_data_o_q)
+);
+
+// FIR Hilbert transformer Q:
+wire signed [15:0] hilbert_o;
+
+fir_hilbert fir_hilbert_q (
+    .clk_i(clk_i),
+    .rstn_i(rstn_i),
+    .fir_data_i(fir_data_o_q),
+    .fir_data_o(hilbert_o)
+);
+
+assign led_0 = &fir_data_o_i | &hilbert_o;
 
 endmodule

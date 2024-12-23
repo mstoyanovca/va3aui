@@ -5,7 +5,7 @@
 //Part Number: GW1NR-LV9QN88PC6/I5
 //Device: GW1NR-9
 //Device Version: C
-//Created Time: Sun Dec 15 18:48:12 2024
+//Created Time: Tue Dec 17 19:14:42 2024
 
 //Change the instance name and port connections to the signal names
 //--------Copy here to design--------
@@ -16,7 +16,7 @@
 		.in_valid(in_valid), //input in_valid
 		.in_data(in_data), //input [31:0] in_data
 		.out_valid(out_valid), //output out_valid
-		.out_data(out_data) //output [67:0] out_data
+		.out_data(out_data) //output [52:0] out_data
 	);
 
 //--------Copy end-------------------

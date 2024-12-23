@@ -10,5 +10,4 @@ for interpolation:
 - CIC filter
 
 
-Tang Nano 9K
-GW1NR-9
+Tang Nano 20K - GW2AR-18 QN88

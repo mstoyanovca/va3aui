@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="cic_filter" Register="638" Alu="544" Lut="300" Ssram="68" T_Register="638(638)" T_Alu="544(544)" T_Lut="300(300)" T_Ssram="68(68)"/>
+<Module name="cic_filter" Register="65" Lut="15" ALU54D="6" T_Register="65(65)" T_Lut="15(15)" T_ALU54D="6(6)"/>

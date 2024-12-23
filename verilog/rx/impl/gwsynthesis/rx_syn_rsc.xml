@@ -1,9 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top" Lut="45" T_Register="2295(0)" T_Alu="1267(0)" T_Lut="2784(45)" T_MULT18X18="2(0)" T_MULT36X36="2(0)" T_Bsram="3(0)" T_Ssram="136(0)">
- <SubModule name="adc" Register="284" Alu="85" Lut="158" MULT18X18="1" Bsram="1" T_Register="284(284)" T_Alu="85(85)" T_Lut="158(158)" T_MULT18X18="1(1)" T_Bsram="1(1)"/>
- <SubModule name="vfo" Register="737" Alu="40" Lut="303" MULT18X18="1" MULT36X36="2" Bsram="2" T_Register="737(737)" T_Alu="40(40)" T_Lut="303(303)" T_MULT18X18="1(1)" T_MULT36X36="2(2)" T_Bsram="2(2)"/>
- <SubModule name="mixer_i" Alu="27" Lut="839" T_Alu="27(27)" T_Lut="839(839)"/>
- <SubModule name="mixer_q" Alu="27" Lut="839" T_Alu="27(27)" T_Lut="839(839)"/>
- <SubModule name="cic_filter_i" Register="637" Alu="544" Lut="300" Ssram="68" T_Register="637(637)" T_Alu="544(544)" T_Lut="300(300)" T_Ssram="68(68)"/>
- <SubModule name="cic_filter_q" Register="637" Alu="544" Lut="300" Ssram="68" T_Register="637(637)" T_Alu="544(544)" T_Lut="300(300)" T_Ssram="68(68)"/>
-</Module>
+<Module name="adc" Register="4" Lut="5" T_Register="4(4)" T_Lut="5(5)"/>

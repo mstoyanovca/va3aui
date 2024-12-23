@@ -3007,9 +3007,9 @@ module integer_multiplier (
   mixer_o
 );
 
-input [11:0] adc_i;
-input [19:0] vfo_i;
-output [31:0] mixer_o;
+input signed [11:0] adc_i;
+input signed [19:0] vfo_i;
+output signed [31:0] mixer_o;
 
 wire VCC;
 wire GND;

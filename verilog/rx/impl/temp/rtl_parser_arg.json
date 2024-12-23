@@ -1,12 +1,12 @@
 {
- "Device" : "GW1NR-9C",
+ "Device" : "GW2AR-18C",
  "Files" : [
   {
-   "Path" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/dds.v",
+   "Path" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/cic_filter.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
+   "Path" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/data_width_converter.v",
    "Type" : "verilog"
   },
   {
@@ -14,11 +14,23 @@
    "Type" : "verilog"
   },
   {
+   "Path" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/fir_decimator.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/fir_hilbert.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/integer_multiplier.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/cic_filter.v",
+   "Path" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/adc.v",
    "Type" : "verilog"
   }
  ],

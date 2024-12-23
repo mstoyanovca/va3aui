@@ -9,25 +9,15 @@
   "SubInsts" : [
    {
     "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
-    "InstLine" : 21,
-    "InstName" : "adc",
-    "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/dds.v",
-    "ModuleLine" : 1444,
-    "ModuleName" : "dds",
-    "SubInsts" : [
-     {
-      "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/dds.v",
-      "InstLine" : 1464,
-      "InstName" : "dds_inst",
-      "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/dds.v",
-      "ModuleLine" : 11,
-      "ModuleName" : "~DDS.dds"
-     }
-    ]
+    "InstLine" : 16,
+    "InstName" : "adc_0",
+    "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/adc.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "adc"
    },
    {
     "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
-    "InstLine" : 48,
+    "InstLine" : 27,
     "InstName" : "vfo",
     "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/dds_ii.v",
     "ModuleLine" : 2981,
@@ -45,7 +35,7 @@
    },
    {
     "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
-    "InstLine" : 65,
+    "InstLine" : 45,
     "InstName" : "mixer_i",
     "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/integer_multiplier.v",
     "ModuleLine" : 3004,
@@ -63,7 +53,7 @@
    },
    {
     "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
-    "InstLine" : 71,
+    "InstLine" : 51,
     "InstName" : "mixer_q",
     "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/integer_multiplier.v",
     "ModuleLine" : 3004,
@@ -81,16 +71,16 @@
    },
    {
     "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
-    "InstLine" : 81,
+    "InstLine" : 61,
     "InstName" : "cic_filter_i",
     "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/cic_filter.v",
-    "ModuleLine" : 4755,
+    "ModuleLine" : 485,
     "ModuleName" : "cic_filter",
     "SubInsts" : [
      {
       "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/cic_filter.v",
-      "InstLine" : 4771,
-      "InstName" : "cic_filter_inst",
+      "InstLine" : 501,
+      "InstName" : "CIC_Filter",
       "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/cic_filter.v",
       "ModuleLine" : 11,
       "ModuleName" : "~CIC_Filter.cic_filter"
@@ -99,19 +89,89 @@
    },
    {
     "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
-    "InstLine" : 88,
+    "InstLine" : 68,
     "InstName" : "cic_filter_q",
     "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/cic_filter.v",
-    "ModuleLine" : 4755,
+    "ModuleLine" : 485,
     "ModuleName" : "cic_filter",
     "SubInsts" : [
      {
       "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/cic_filter.v",
-      "InstLine" : 4771,
-      "InstName" : "cic_filter_inst",
+      "InstLine" : 501,
+      "InstName" : "CIC_Filter",
       "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/cic_filter.v",
       "ModuleLine" : 11,
       "ModuleName" : "~CIC_Filter.cic_filter"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
+    "InstLine" : 79,
+    "InstName" : "data_width_converter_i",
+    "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/data_width_converter.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "data_width_converter"
+   },
+   {
+    "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
+    "InstLine" : 86,
+    "InstName" : "data_width_converter_q",
+    "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/data_width_converter.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "data_width_converter"
+   },
+   {
+    "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
+    "InstLine" : 97,
+    "InstName" : "fir_decimator_i",
+    "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/fir_decimator.v",
+    "ModuleLine" : 12259,
+    "ModuleName" : "fir_decimator",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/fir_decimator.v",
+      "InstLine" : 12277,
+      "InstName" : "fir_decimator_inst",
+      "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/fir_decimator.v",
+      "ModuleLine" : 12,
+      "ModuleName" : "~advanced_fir_filter.fir_decimator"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
+    "InstLine" : 104,
+    "InstName" : "fir_decimator_q",
+    "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/fir_decimator.v",
+    "ModuleLine" : 12259,
+    "ModuleName" : "fir_decimator",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/fir_decimator.v",
+      "InstLine" : 12277,
+      "InstName" : "fir_decimator_inst",
+      "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/fir_decimator.v",
+      "ModuleLine" : 12,
+      "ModuleName" : "~advanced_fir_filter.fir_decimator"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/top.v",
+    "InstLine" : 114,
+    "InstName" : "fir_hilbert_q",
+    "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/fir_hilbert.v",
+    "ModuleLine" : 15118,
+    "ModuleName" : "fir_hilbert",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/fir_hilbert.v",
+      "InstLine" : 15136,
+      "InstName" : "fir_hilbert_inst",
+      "ModuleFile" : "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/src/fir_hilbert.v",
+      "ModuleLine" : 12,
+      "ModuleName" : "~advanced_fir_filter.fir_hilbert"
      }
     ]
    }

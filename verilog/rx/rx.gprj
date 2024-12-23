@@ -3,11 +3,14 @@
 <Project>
     <Template>FPGA</Template>
     <Version>5</Version>
-    <Device name="GW1NR-9C" pn="GW1NR-LV9QN88PC6/I5">gw1nr9c-004</Device>
+    <Device name="GW2AR-18C" pn="GW2AR-LV18QN88C7/I6">gw2ar18c-001</Device>
     <FileList>
+        <File path="src/adc.v" type="file.verilog" enable="1"/>
         <File path="src/cic_filter.v" type="file.verilog" enable="1"/>
-        <File path="src/dds.v" type="file.verilog" enable="1"/>
+        <File path="src/data_width_converter.v" type="file.verilog" enable="1"/>
         <File path="src/dds_ii.v" type="file.verilog" enable="1"/>
+        <File path="src/fir_decimator.v" type="file.verilog" enable="1"/>
+        <File path="src/fir_hilbert.v" type="file.verilog" enable="1"/>
         <File path="src/integer_multiplier.v" type="file.verilog" enable="1"/>
         <File path="src/top.v" type="file.verilog" enable="1"/>
         <File path="src/rx.cst" type="file.cst" enable="1"/>

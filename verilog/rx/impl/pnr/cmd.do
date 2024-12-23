@@ -1,6 +1,6 @@
 -d C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\impl\gwsynthesis\rx.vg
--p GW1NR-9C-QFN88P-6
--pn GW1NR-LV9QN88PC6/I5
+-p GW2AR-18C-QFN88-7
+-pn GW2AR-LV18QN88C7/I6
 -cst C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\rx.cst
 -cfg C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\impl\pnr\device.cfg
 -sdc C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\rx.sdc
@@ -12,4 +12,4 @@
 -convert_sdp32_36_to_sdp16_18
 -correct_hold 1
 -route_maxfan 23
--global_freq 50.000
+-global_freq 100.000

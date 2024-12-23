@@ -2,28 +2,6 @@ Reading netlist file: "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\i
 Parsing netlist file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\impl\gwsynthesis\rx.vg" completed
 Processing netlist completed
 Reading constraint file: "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\rx.cst"
-Physical Constraint parsed completed
-Running placement......
-[10%] Placement Phase 0 completed
-[20%] Placement Phase 1 completed
-[30%] Placement Phase 2 completed
-[50%] Placement Phase 3 completed
-Running routing......
-[60%] Routing Phase 0 completed
-[70%] Routing Phase 1 completed
-[80%] Routing Phase 2 completed
-[90%] Routing Phase 3 completed
-Running timing analysis......
-[95%] Timing analysis completed
-Placement and routing completed
-Bitstream generation in progress......
-Bitstream generation completed
-Running power analysis......
-[100%] Power analysis completed
-Generate file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\impl\pnr\rx.power.html" completed
-Generate file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\impl\pnr\rx.pin.html" completed
-Generate file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\impl\pnr\rx.rpt.html" completed
-Generate file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\impl\pnr\rx.rpt.txt" completed
-Generate file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\impl\pnr\rx.tr.html" completed
-Sun Dec 15 20:43:22 2024
-
+ERROR  (CT1135) : "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\rx.cst":10 | Can't find object named 'led_0'
+ERROR  (CT1135) : "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\rx.cst":11 | Can't find object named 'led_0'
+Physical Constraint parsed completed with errors

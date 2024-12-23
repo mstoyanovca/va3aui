@@ -32,6 +32,7 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "~integrator.cic_filter" instantiated to "integrator[1].integrator_inst" is swept in optimizing("C:\Gowin\Gowin_V1.9.10.03_x64\IDE\ipcore\CIC_Filter\data\CIC_Filter.v":276)
 [95%] Generate netlist file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\temp\cic_filter\cic_filter.vg" completed
 Generate template file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\temp\cic_filter\cic_filter_tmp.v" completed
 [100%] Generate report file "C:\Users\Martin Stoyanov\IdeaProjects\va3aui\verilog\rx\src\temp\cic_filter\cic_filter_syn.rpt.html" completed

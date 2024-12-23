@@ -2987,8 +2987,8 @@ module dds_ii (
 
 input clk_i;
 input [24:0] phase_i;
-output [19:0] cosine_o;
-output [19:0] sine_o;
+output signed [19:0] cosine_o;
+output signed [19:0] sine_o;
 wire data_valid_o;
 
 wire VCC;
@@ -2997,10 +2997,10 @@ wire GND;
 \~dds_ii_core.dds_ii  dds_ii_inst (
     .clk_i(clk_i),
     .phase_valid_i(1'b1),
-    .phase_i(phase_i[24:0]),
+    .phase_i(phase_i),
     .data_valid_o(data_valid_o),
-    .sine_o(sine_o[19:0]),
-    .cosine_o(cosine_o[19:0])
+    .sine_o(sine_o),
+    .cosine_o(cosine_o)
 );
 
 VCC VCC_cZ (
