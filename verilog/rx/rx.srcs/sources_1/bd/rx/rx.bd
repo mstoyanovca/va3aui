@@ -1,0 +1,725 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x2D03538E2D03538E",
+      "device": "xc7z020clg484-1",
+      "gen_directory": "../../../../rx.gen/sources_1/bd/rx",
+      "name": "rx",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "mult_gen_0": "",
+      "mult_gen_1": "",
+      "dds_compiler_0": "",
+      "xlslice_1": "",
+      "xlslice_2": "",
+      "cic_compiler_0": "",
+      "cic_compiler_1": "",
+      "fir_compiler_0": "",
+      "fir_compiler_1": "",
+      "sim_clk_gen_0": "",
+      "fir_compiler_2": "",
+      "c_addsub_0": "",
+      "xlslice_3": "",
+      "xlslice_0": ""
+    },
+    "ports": {
+      "adc_i": {
+        "type": "data",
+        "direction": "I",
+        "left": "11",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "Add_Substract": {
+        "type": "data",
+        "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "Audio": {
+        "type": "data",
+        "direction": "O",
+        "left": "15",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": [
+              "xilinx.com:interface:datatypes:1.0 {",
+              "DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum",
+              "{} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format",
+              "bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 16",
+              "}"
+            ],
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "ph_i": {
+        "type": "data",
+        "direction": "I",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "mult_gen_0": {
+        "vlnv": "xilinx.com:ip:mult_gen:12.0",
+        "ip_revision": "21",
+        "xci_name": "rx_mult_gen_0_0",
+        "xci_path": "ip\\rx_mult_gen_0_0\\rx_mult_gen_0_0.xci",
+        "inst_hier_path": "mult_gen_0",
+        "parameters": {
+          "Multiplier_Construction": {
+            "value": "Use_LUTs"
+          },
+          "OutputWidthHigh": {
+            "value": "31"
+          },
+          "PortAWidth": {
+            "value": "12"
+          },
+          "PortBWidth": {
+            "value": "20"
+          },
+          "SyncClear": {
+            "value": "false"
+          },
+          "Use_Custom_Output_Width": {
+            "value": "true"
+          }
+        }
+      },
+      "mult_gen_1": {
+        "vlnv": "xilinx.com:ip:mult_gen:12.0",
+        "ip_revision": "21",
+        "xci_name": "rx_mult_gen_0_2",
+        "xci_path": "ip\\rx_mult_gen_0_2\\rx_mult_gen_0_2.xci",
+        "inst_hier_path": "mult_gen_1",
+        "parameters": {
+          "Multiplier_Construction": {
+            "value": "Use_LUTs"
+          },
+          "OutputWidthHigh": {
+            "value": "31"
+          },
+          "PortAWidth": {
+            "value": "12"
+          },
+          "PortBWidth": {
+            "value": "20"
+          },
+          "SyncClear": {
+            "value": "false"
+          },
+          "Use_Custom_Output_Width": {
+            "value": "true"
+          }
+        }
+      },
+      "dds_compiler_0": {
+        "vlnv": "xilinx.com:ip:dds_compiler:6.0",
+        "ip_revision": "25",
+        "xci_name": "rx_dds_compiler_0_0",
+        "xci_path": "ip\\rx_dds_compiler_0_0\\rx_dds_compiler_0_0.xci",
+        "inst_hier_path": "dds_compiler_0",
+        "parameters": {
+          "DATA_Has_TLAST": {
+            "value": "Not_Required"
+          },
+          "DDS_Clock_Rate": {
+            "value": "100"
+          },
+          "Frequency_Resolution": {
+            "value": "0.4"
+          },
+          "Has_Phase_Out": {
+            "value": "false"
+          },
+          "Latency": {
+            "value": "7"
+          },
+          "M_DATA_Has_TUSER": {
+            "value": "Not_Required"
+          },
+          "Noise_Shaping": {
+            "value": "Taylor_Series_Corrected"
+          },
+          "OUTPUT_FORM": {
+            "value": "Twos_Complement"
+          },
+          "Output_Frequency1": {
+            "value": "0"
+          },
+          "Output_Selection": {
+            "value": "Sine_and_Cosine"
+          },
+          "Output_Type": {
+            "value": "Integer"
+          },
+          "Output_Width": {
+            "value": "20"
+          },
+          "PINC1": {
+            "value": "0"
+          },
+          "Parameter_Entry": {
+            "value": "Hardware_Parameters"
+          },
+          "PartsPresent": {
+            "value": "SIN_COS_LUT_only"
+          },
+          "Phase_Width": {
+            "value": "25"
+          },
+          "S_PHASE_Has_TUSER": {
+            "value": "Not_Required"
+          }
+        }
+      },
+      "xlslice_1": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "4",
+        "xci_name": "rx_xlslice_1_0",
+        "xci_path": "ip\\rx_xlslice_1_0\\rx_xlslice_1_0.xci",
+        "inst_hier_path": "xlslice_1",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "43"
+          },
+          "DIN_TO": {
+            "value": "24"
+          },
+          "DIN_WIDTH": {
+            "value": "48"
+          },
+          "DOUT_WIDTH": {
+            "value": "20"
+          }
+        }
+      },
+      "xlslice_2": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "4",
+        "xci_name": "rx_xlslice_1_1",
+        "xci_path": "ip\\rx_xlslice_1_1\\rx_xlslice_1_1.xci",
+        "inst_hier_path": "xlslice_2",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "19"
+          },
+          "DIN_TO": {
+            "value": "0"
+          },
+          "DIN_WIDTH": {
+            "value": "48"
+          },
+          "DOUT_WIDTH": {
+            "value": "20"
+          }
+        }
+      },
+      "cic_compiler_0": {
+        "vlnv": "xilinx.com:ip:cic_compiler:4.0",
+        "ip_revision": "19",
+        "xci_name": "rx_cic_compiler_0_0",
+        "xci_path": "ip\\rx_cic_compiler_0_0\\rx_cic_compiler_0_0.xci",
+        "inst_hier_path": "cic_compiler_0",
+        "parameters": {
+          "Clock_Frequency": {
+            "value": "65"
+          },
+          "Filter_Type": {
+            "value": "Decimation"
+          },
+          "Fixed_Or_Initial_Rate": {
+            "value": "43"
+          },
+          "Input_Data_Width": {
+            "value": "32"
+          },
+          "Input_Sample_Frequency": {
+            "value": "65"
+          },
+          "Maximum_Rate": {
+            "value": "43"
+          },
+          "Minimum_Rate": {
+            "value": "43"
+          },
+          "Output_Data_Width": {
+            "value": "32"
+          },
+          "Quantization": {
+            "value": "Truncation"
+          },
+          "RateSpecification": {
+            "value": "Frequency_Specification"
+          },
+          "SamplePeriod": {
+            "value": "1"
+          }
+        }
+      },
+      "cic_compiler_1": {
+        "vlnv": "xilinx.com:ip:cic_compiler:4.0",
+        "ip_revision": "19",
+        "xci_name": "rx_cic_compiler_0_1",
+        "xci_path": "ip\\rx_cic_compiler_0_1\\rx_cic_compiler_0_1.xci",
+        "inst_hier_path": "cic_compiler_1",
+        "parameters": {
+          "Clock_Frequency": {
+            "value": "65"
+          },
+          "Filter_Type": {
+            "value": "Decimation"
+          },
+          "Fixed_Or_Initial_Rate": {
+            "value": "43"
+          },
+          "Input_Data_Width": {
+            "value": "32"
+          },
+          "Input_Sample_Frequency": {
+            "value": "65"
+          },
+          "Maximum_Rate": {
+            "value": "43"
+          },
+          "Minimum_Rate": {
+            "value": "43"
+          },
+          "Output_Data_Width": {
+            "value": "32"
+          },
+          "Quantization": {
+            "value": "Truncation"
+          },
+          "RateSpecification": {
+            "value": "Frequency_Specification"
+          },
+          "SamplePeriod": {
+            "value": "1"
+          }
+        }
+      },
+      "fir_compiler_0": {
+        "vlnv": "xilinx.com:ip:fir_compiler:7.2",
+        "ip_revision": "22",
+        "xci_name": "rx_fir_compiler_0_0",
+        "xci_path": "ip\\rx_fir_compiler_0_0\\rx_fir_compiler_0_0.xci",
+        "inst_hier_path": "fir_compiler_0",
+        "parameters": {
+          "Clock_Frequency": {
+            "value": "64.896"
+          },
+          "CoefficientSource": {
+            "value": "COE_File"
+          },
+          "CoefficientVector": {
+            "value": "-202,-158,-58,246,917,2079,3771,5916,8318,10689,12701,14052,14527,14052,12701,10689,8318,5916,3771,2079,917,246,-58,-158,-202"
+          },
+          "Coefficient_File": {
+            "value": "../../../../../../../../matlab/fir_decimator.coe"
+          },
+          "Coefficient_Fractional_Bits": {
+            "value": "0"
+          },
+          "Coefficient_Sets": {
+            "value": "1"
+          },
+          "Coefficient_Sign": {
+            "value": "Signed"
+          },
+          "Coefficient_Structure": {
+            "value": "Inferred"
+          },
+          "Coefficient_Width": {
+            "value": "16"
+          },
+          "Data_Width": {
+            "value": "32"
+          },
+          "Decimation_Rate": {
+            "value": "8"
+          },
+          "Filter_Architecture": {
+            "value": "Systolic_Multiply_Accumulate"
+          },
+          "Filter_Type": {
+            "value": "Decimation"
+          },
+          "Interpolation_Rate": {
+            "value": "1"
+          },
+          "Number_Channels": {
+            "value": "1"
+          },
+          "Output_Rounding_Mode": {
+            "value": "Non_Symmetric_Rounding_Up"
+          },
+          "Output_Width": {
+            "value": "16"
+          },
+          "Quantization": {
+            "value": "Integer_Coefficients"
+          },
+          "RateSpecification": {
+            "value": "Frequency_Specification"
+          },
+          "Sample_Frequency": {
+            "value": "0.384"
+          },
+          "Zero_Pack_Factor": {
+            "value": "1"
+          }
+        }
+      },
+      "fir_compiler_1": {
+        "vlnv": "xilinx.com:ip:fir_compiler:7.2",
+        "ip_revision": "22",
+        "xci_name": "rx_fir_compiler_0_1",
+        "xci_path": "ip\\rx_fir_compiler_0_1\\rx_fir_compiler_0_1.xci",
+        "inst_hier_path": "fir_compiler_1",
+        "parameters": {
+          "Clock_Frequency": {
+            "value": "64.896"
+          },
+          "CoefficientSource": {
+            "value": "COE_File"
+          },
+          "CoefficientVector": {
+            "value": "-202,-158,-58,246,917,2079,3771,5916,8318,10689,12701,14052,14527,14052,12701,10689,8318,5916,3771,2079,917,246,-58,-158,-202"
+          },
+          "Coefficient_File": {
+            "value": "../../../../../../../../matlab/fir_decimator.coe"
+          },
+          "Coefficient_Fractional_Bits": {
+            "value": "0"
+          },
+          "Coefficient_Sets": {
+            "value": "1"
+          },
+          "Coefficient_Sign": {
+            "value": "Signed"
+          },
+          "Coefficient_Structure": {
+            "value": "Inferred"
+          },
+          "Coefficient_Width": {
+            "value": "16"
+          },
+          "Data_Width": {
+            "value": "32"
+          },
+          "Decimation_Rate": {
+            "value": "8"
+          },
+          "Filter_Architecture": {
+            "value": "Systolic_Multiply_Accumulate"
+          },
+          "Filter_Type": {
+            "value": "Decimation"
+          },
+          "Interpolation_Rate": {
+            "value": "1"
+          },
+          "Number_Channels": {
+            "value": "1"
+          },
+          "Output_Rounding_Mode": {
+            "value": "Non_Symmetric_Rounding_Up"
+          },
+          "Output_Width": {
+            "value": "16"
+          },
+          "Quantization": {
+            "value": "Integer_Coefficients"
+          },
+          "RateSpecification": {
+            "value": "Frequency_Specification"
+          },
+          "Sample_Frequency": {
+            "value": "0.384"
+          },
+          "Zero_Pack_Factor": {
+            "value": "1"
+          }
+        }
+      },
+      "sim_clk_gen_0": {
+        "vlnv": "xilinx.com:ip:sim_clk_gen:1.0",
+        "ip_revision": "4",
+        "xci_name": "rx_sim_clk_gen_0_0",
+        "xci_path": "ip\\rx_sim_clk_gen_0_0\\rx_sim_clk_gen_0_0.xci",
+        "inst_hier_path": "sim_clk_gen_0",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "64896000"
+          }
+        }
+      },
+      "fir_compiler_2": {
+        "vlnv": "xilinx.com:ip:fir_compiler:7.2",
+        "ip_revision": "22",
+        "xci_name": "rx_fir_compiler_2_0",
+        "xci_path": "ip\\rx_fir_compiler_2_0\\rx_fir_compiler_2_0.xci",
+        "inst_hier_path": "fir_compiler_2",
+        "parameters": {
+          "Clock_Frequency": {
+            "value": "64.896"
+          },
+          "CoefficientSource": {
+            "value": "COE_File"
+          },
+          "Coefficient_File": {
+            "value": "../../../../../../../../matlab/fir_hilbert.coe"
+          },
+          "Coefficient_Fractional_Bits": {
+            "value": "15"
+          },
+          "Coefficient_Sets": {
+            "value": "1"
+          },
+          "Coefficient_Sign": {
+            "value": "Signed"
+          },
+          "Coefficient_Structure": {
+            "value": "Hilbert"
+          },
+          "Coefficient_Width": {
+            "value": "16"
+          },
+          "Decimation_Rate": {
+            "value": "1"
+          },
+          "Filter_Architecture": {
+            "value": "Systolic_Multiply_Accumulate"
+          },
+          "Filter_Type": {
+            "value": "Hilbert"
+          },
+          "Interpolation_Rate": {
+            "value": "1"
+          },
+          "Number_Channels": {
+            "value": "1"
+          },
+          "Output_Rounding_Mode": {
+            "value": "Non_Symmetric_Rounding_Up"
+          },
+          "Output_Width": {
+            "value": "16"
+          },
+          "Quantization": {
+            "value": "Quantize_Only"
+          },
+          "RateSpecification": {
+            "value": "Frequency_Specification"
+          },
+          "Sample_Frequency": {
+            "value": "0.048"
+          },
+          "Zero_Pack_Factor": {
+            "value": "1"
+          }
+        }
+      },
+      "c_addsub_0": {
+        "vlnv": "xilinx.com:ip:c_addsub:12.0",
+        "ip_revision": "18",
+        "xci_name": "rx_c_addsub_0_0",
+        "xci_path": "ip\\rx_c_addsub_0_0\\rx_c_addsub_0_0.xci",
+        "inst_hier_path": "c_addsub_0",
+        "parameters": {
+          "A_Width": {
+            "value": "16"
+          },
+          "Add_Mode": {
+            "value": "Add_Subtract"
+          },
+          "B_Value": {
+            "value": "0000000000000000"
+          },
+          "B_Width": {
+            "value": "16"
+          },
+          "Latency": {
+            "value": "1"
+          },
+          "Out_Width": {
+            "value": "16"
+          }
+        }
+      },
+      "xlslice_3": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "4",
+        "xci_name": "rx_xlslice_1_2",
+        "xci_path": "ip\\rx_xlslice_1_2\\rx_xlslice_1_2.xci",
+        "inst_hier_path": "xlslice_3",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "31"
+          },
+          "DIN_TO": {
+            "value": "16"
+          },
+          "DIN_WIDTH": {
+            "value": "32"
+          },
+          "DOUT_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "4",
+        "xci_name": "rx_xlslice_0_1",
+        "xci_path": "ip\\rx_xlslice_0_1\\rx_xlslice_0_1.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "31"
+          },
+          "DOUT_WIDTH": {
+            "value": "32"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Add_Substract_1": {
+        "ports": [
+          "Add_Substract",
+          "c_addsub_0/ADD"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "sim_clk_gen_0/clk",
+          "mult_gen_0/CLK",
+          "dds_compiler_0/aclk",
+          "mult_gen_1/CLK",
+          "cic_compiler_1/aclk",
+          "cic_compiler_0/aclk",
+          "fir_compiler_0/aclk",
+          "fir_compiler_1/aclk",
+          "fir_compiler_2/aclk",
+          "c_addsub_0/CLK"
+        ]
+      },
+      "adc_i_1": {
+        "ports": [
+          "adc_i",
+          "mult_gen_0/A",
+          "mult_gen_1/A"
+        ]
+      },
+      "c_addsub_0_S": {
+        "ports": [
+          "c_addsub_0/S",
+          "Audio"
+        ]
+      },
+      "cic_compiler_0_m_axis_data_tdata": {
+        "ports": [
+          "cic_compiler_0/m_axis_data_tdata",
+          "fir_compiler_1/s_axis_data_tdata"
+        ]
+      },
+      "cic_compiler_1_m_axis_data_tdata": {
+        "ports": [
+          "cic_compiler_1/m_axis_data_tdata",
+          "fir_compiler_0/s_axis_data_tdata"
+        ]
+      },
+      "dds_compiler_0_m_axis_data_tdata": {
+        "ports": [
+          "dds_compiler_0/m_axis_data_tdata",
+          "xlslice_1/Din",
+          "xlslice_2/Din"
+        ]
+      },
+      "fir_compiler_0_m_axis_data_tdata": {
+        "ports": [
+          "fir_compiler_0/m_axis_data_tdata",
+          "fir_compiler_2/s_axis_data_tdata"
+        ]
+      },
+      "fir_compiler_1_m_axis_data_tdata": {
+        "ports": [
+          "fir_compiler_1/m_axis_data_tdata",
+          "c_addsub_0/A"
+        ]
+      },
+      "fir_compiler_2_m_axis_data_tdata": {
+        "ports": [
+          "fir_compiler_2/m_axis_data_tdata",
+          "xlslice_3/Din"
+        ]
+      },
+      "mult_gen_0_P": {
+        "ports": [
+          "mult_gen_0/P",
+          "cic_compiler_0/s_axis_data_tdata"
+        ]
+      },
+      "mult_gen_1_P": {
+        "ports": [
+          "mult_gen_1/P",
+          "cic_compiler_1/s_axis_data_tdata"
+        ]
+      },
+      "ph_i_1": {
+        "ports": [
+          "ph_i",
+          "xlslice_0/Din"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "dds_compiler_0/s_axis_phase_tdata"
+        ]
+      },
+      "xlslice_1_Dout": {
+        "ports": [
+          "xlslice_1/Dout",
+          "mult_gen_0/B"
+        ]
+      },
+      "xlslice_2_Dout": {
+        "ports": [
+          "xlslice_2/Dout",
+          "mult_gen_1/B"
+        ]
+      },
+      "xlslice_3_Dout": {
+        "ports": [
+          "xlslice_3/Dout",
+          "c_addsub_0/B"
+        ]
+      }
+    }
+  }
+}

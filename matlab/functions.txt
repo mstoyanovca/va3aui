@@ -47,4 +47,3 @@ A = (I²+Q²)½
 I = A*cos(ϕ)
 Q = A*sin(ϕ)
 converting IQ to a plain signal: I is the original signal
-

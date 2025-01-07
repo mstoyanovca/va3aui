@@ -1,0 +1,18 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.gen/sources_1/bd/rx/ip/rx_mult_gen_0_0/sim/rx_mult_gen_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rx_mult_gen_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.gen/sources_1/bd/rx/ip/rx_mult_gen_0_2/sim/rx_mult_gen_0_2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rx_mult_gen_0_2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.gen/sources_1/bd/rx/ip/rx_dds_compiler_0_0/sim/rx_dds_compiler_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rx_dds_compiler_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.gen/sources_1/bd/rx/ip/rx_cic_compiler_0_0/sim/rx_cic_compiler_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rx_cic_compiler_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.gen/sources_1/bd/rx/ip/rx_cic_compiler_0_1/sim/rx_cic_compiler_0_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rx_cic_compiler_0_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.gen/sources_1/bd/rx/ip/rx_fir_compiler_0_0/sim/rx_fir_compiler_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rx_fir_compiler_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.gen/sources_1/bd/rx/ip/rx_fir_compiler_0_1/sim/rx_fir_compiler_0_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rx_fir_compiler_0_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.gen/sources_1/bd/rx/ip/rx_fir_compiler_2_0/sim/rx_fir_compiler_2_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rx_fir_compiler_2_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.gen/sources_1/bd/rx/ip/rx_c_addsub_0_0/sim/rx_c_addsub_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rx_c_addsub_0_0'

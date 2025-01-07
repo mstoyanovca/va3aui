@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="rx_wrapper_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="rx_wrapper" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="999,990 ps"></ZoomStartTime>
+      <ZoomEndTime time="1,000,003 ps"></ZoomEndTime>
+      <Cursor1Time time="1,000,000 ps"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="104"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="26" />
+   <wvobject fp_name="/rx_wrapper/Add_Substract" type="logic">
+      <obj_property name="ElementShortName">Add_Substract</obj_property>
+      <obj_property name="ObjectShortName">Add_Substract</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/Audio" type="array">
+      <obj_property name="ElementShortName">Audio[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Audio[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/adc_i" type="array">
+      <obj_property name="ElementShortName">adc_i[11:0]</obj_property>
+      <obj_property name="ObjectShortName">adc_i[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/ph_i" type="array">
+      <obj_property name="ElementShortName">ph_i[24:0]</obj_property>
+      <obj_property name="ObjectShortName">ph_i[24:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/clk_n" type="logic">
+      <obj_property name="ElementShortName">clk_n</obj_property>
+      <obj_property name="ObjectShortName">clk_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/clk_p" type="logic">
+      <obj_property name="ElementShortName">clk_p</obj_property>
+      <obj_property name="ObjectShortName">clk_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/sync_rst" type="logic">
+      <obj_property name="ElementShortName">sync_rst</obj_property>
+      <obj_property name="ObjectShortName">sync_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/rst_trigger" type="logic">
+      <obj_property name="ElementShortName">rst_trigger</obj_property>
+      <obj_property name="ObjectShortName">rst_trigger</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/rst_counter" type="array">
+      <obj_property name="ElementShortName">rst_counter[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rst_counter[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/shutdown_counter" type="array">
+      <obj_property name="ElementShortName">shutdown_counter[15:0]</obj_property>
+      <obj_property name="ObjectShortName">shutdown_counter[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/CLOCK_PERIOD" type="other">
+      <obj_property name="ElementShortName">CLOCK_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">CLOCK_PERIOD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/INITIAL_RESET_CLOCK_CYCLES" type="array">
+      <obj_property name="ElementShortName">INITIAL_RESET_CLOCK_CYCLES[31:0]</obj_property>
+      <obj_property name="ObjectShortName">INITIAL_RESET_CLOCK_CYCLES[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/RESET_POLARITY" type="array">
+      <obj_property name="ElementShortName">RESET_POLARITY[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RESET_POLARITY[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/CLOCK_CYCLES_BEFORE_SHUTDOWN" type="array">
+      <obj_property name="ElementShortName">CLOCK_CYCLES_BEFORE_SHUTDOWN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLOCK_CYCLES_BEFORE_SHUTDOWN[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/clk_n" type="logic">
+      <obj_property name="ElementShortName">clk_n</obj_property>
+      <obj_property name="ObjectShortName">clk_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/clk_p" type="logic">
+      <obj_property name="ElementShortName">clk_p</obj_property>
+      <obj_property name="ObjectShortName">clk_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/sync_rst" type="logic">
+      <obj_property name="ElementShortName">sync_rst</obj_property>
+      <obj_property name="ObjectShortName">sync_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/rst_trigger" type="logic">
+      <obj_property name="ElementShortName">rst_trigger</obj_property>
+      <obj_property name="ObjectShortName">rst_trigger</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/rst_counter" type="array">
+      <obj_property name="ElementShortName">rst_counter[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rst_counter[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/shutdown_counter" type="array">
+      <obj_property name="ElementShortName">shutdown_counter[15:0]</obj_property>
+      <obj_property name="ObjectShortName">shutdown_counter[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/CLOCK_PERIOD" type="other">
+      <obj_property name="ElementShortName">CLOCK_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">CLOCK_PERIOD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/INITIAL_RESET_CLOCK_CYCLES" type="array">
+      <obj_property name="ElementShortName">INITIAL_RESET_CLOCK_CYCLES[31:0]</obj_property>
+      <obj_property name="ObjectShortName">INITIAL_RESET_CLOCK_CYCLES[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/RESET_POLARITY" type="array">
+      <obj_property name="ElementShortName">RESET_POLARITY[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RESET_POLARITY[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rx_wrapper/rx_i/sim_clk_gen_0/inst/CLOCK_CYCLES_BEFORE_SHUTDOWN" type="array">
+      <obj_property name="ElementShortName">CLOCK_CYCLES_BEFORE_SHUTDOWN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLOCK_CYCLES_BEFORE_SHUTDOWN[31:0]</obj_property>
+   </wvobject>
+</wave_config>

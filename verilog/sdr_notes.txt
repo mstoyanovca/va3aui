@@ -1,10 +1,40 @@
-for decimation:
-- CIC filter
+Decimation:
+- CIC decimator
   -- huge rolloff
   -- requires FIR compensation/equalization filter
-- FIR filter 8 - 16
-  -  keep the order an odd number
-
-for interpolation:
+  -- it can be ignored, if followed by a 8-16 times FIR decimator
+- FIR decimator 8-16
+Interpolation:
 - FIR filter
 - CIC filter
+
+ADC:
+- AD9226;
+- fc = 64.896MHz;
+
+DDS:
+IMD = dBc/Hz - 10*lg(BW)
+for AD9226 SFDR = 85dB
+for FT8 BW = 3kHz
+dBc/Hz needed is 120dB
+
+for SIN COS LUT mode fc = 100MHz
+out_w = SFDR/6 = 20 bits
+ph_w = log2(fc/freq_res) = 25 bits
+fo = fc*PINC/2^ph_w
+for 7.074MHz PINC = 2,373,641 (h243809)
+
+CIC decimator:
+ratio = 169;
+fs after CIC decimation = 384KSPS;
+stages = 3;
+differential delay = 1;
+
+FIR decimator:
+ratio = 8;
+fs after FIR decimation = 48KSPS;
+n = 436;
+
+Hilbert transformer:
+fs = 48KSPS;
+n = 55;

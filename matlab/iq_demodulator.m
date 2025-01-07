@@ -1,6 +1,7 @@
 addpath("C:\Users\Martin Stoyanov\IdeaProjects\va3aui\matlab")
 pkg load communications
 pkg load signal
+pkg load octave
 clear all
 close all
 clc

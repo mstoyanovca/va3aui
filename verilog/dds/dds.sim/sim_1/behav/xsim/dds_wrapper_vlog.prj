@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../dds.gen/sources_1/bd/dds/ip/dds_xlslice_0_0/sim/dds_xlslice_0_0.v" \
+"../../../../dds.gen/sources_1/bd/dds/ip/dds_xlslice_0_1/sim/dds_xlslice_0_1.v" \
+"../../../../dds.gen/sources_1/bd/dds/ip/dds_sim_clk_gen_0_0/sim/dds_sim_clk_gen_0_0.v" \
+"../../../../dds.gen/sources_1/bd/dds/sim/dds.v" \
+"../../../../dds.srcs/sources_1/imports/hdl/dds_wrapper.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

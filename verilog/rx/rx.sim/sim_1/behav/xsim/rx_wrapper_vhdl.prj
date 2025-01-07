@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../rx.gen/sources_1/bd/rx/ip/rx_mult_gen_0_0/sim/rx_mult_gen_0_0.vhd" \
+"../../../../rx.gen/sources_1/bd/rx/ip/rx_mult_gen_0_2/sim/rx_mult_gen_0_2.vhd" \
+"../../../../rx.gen/sources_1/bd/rx/ip/rx_dds_compiler_0_0/sim/rx_dds_compiler_0_0.vhd" \
+"../../../../rx.gen/sources_1/bd/rx/ip/rx_cic_compiler_0_0/sim/rx_cic_compiler_0_0.vhd" \
+"../../../../rx.gen/sources_1/bd/rx/ip/rx_cic_compiler_0_1/sim/rx_cic_compiler_0_1.vhd" \
+"../../../../rx.gen/sources_1/bd/rx/ip/rx_fir_compiler_0_0/sim/rx_fir_compiler_0_0.vhd" \
+"../../../../rx.gen/sources_1/bd/rx/ip/rx_fir_compiler_0_1/sim/rx_fir_compiler_0_1.vhd" \
+"../../../../rx.gen/sources_1/bd/rx/ip/rx_fir_compiler_2_0/sim/rx_fir_compiler_2_0.vhd" \
+"../../../../rx.gen/sources_1/bd/rx/ip/rx_c_addsub_0_0/sim/rx_c_addsub_0_0.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Dec 27 15:17:23 2024
+# Process ID: 7604
+# Current directory: C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.runs/rx_fir_compiler_0_0_synth_1
+# Command line: vivado.exe -log rx_fir_compiler_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rx_fir_compiler_0_0.tcl
+# Log file: C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.runs/rx_fir_compiler_0_0_synth_1/rx_fir_compiler_0_0.vds
+# Journal file: C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.runs/rx_fir_compiler_0_0_synth_1\vivado.jou
+# Running On        :DESKTOP
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :AMD Ryzen 7 1700 Eight-Core Processor          
+# CPU Frequency     :2994 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :17110 MB
+# Swap memory       :10021 MB
+# Total Virtual     :27131 MB
+# Available Virtual :12743 MB
+#-----------------------------------------------------------
+source rx_fir_compiler_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 530.562 ; gain = 199.945
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: rx_fir_compiler_0_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 43d8a5429b6df615 to dir: C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.runs/rx_fir_compiler_0_0_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.cache/ip/2024.1/4/3/43d8a5429b6df615/rx_fir_compiler_0_0.dcp to C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.runs/rx_fir_compiler_0_0_synth_1/rx_fir_compiler_0_0.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.cache/ip/2024.1/4/3/43d8a5429b6df615/rx_fir_compiler_0_0_sim_netlist.v to C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.runs/rx_fir_compiler_0_0_synth_1/rx_fir_compiler_0_0_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.cache/ip/2024.1/4/3/43d8a5429b6df615/rx_fir_compiler_0_0_sim_netlist.vhdl to C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.runs/rx_fir_compiler_0_0_synth_1/rx_fir_compiler_0_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.cache/ip/2024.1/4/3/43d8a5429b6df615/rx_fir_compiler_0_0_stub.v to C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.runs/rx_fir_compiler_0_0_synth_1/rx_fir_compiler_0_0_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.cache/ip/2024.1/4/3/43d8a5429b6df615/rx_fir_compiler_0_0_stub.vhdl to C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/rx/rx.runs/rx_fir_compiler_0_0_synth_1/rx_fir_compiler_0_0_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP rx_fir_compiler_0_0, cache-ID = 43d8a5429b6df615.
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 27 15:17:41 2024...

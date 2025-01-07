@@ -1,0 +1,17 @@
+
+*** Running vivado
+    with args -log rx_mult_gen_0_2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rx_mult_gen_0_2.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Fri Dec 27 15:11:53 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source rx_mult_gen_0_2.tcl -notrace
+couldn't read file "rx_mult_gen_0_2.tcl": no such file or directory
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 27 15:11:57 2024...
