@@ -11,7 +11,7 @@ initial begin
 
     #10 rstn <= 1;
     #150 $finish;
-  end
+end
 
 always #5 clk = ~clk;
 

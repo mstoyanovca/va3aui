@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Jan  6 20:41:15 2025
-# Process ID: 20920
+# Start of session at: Mon Jan 13 19:48:08 2025
+# Process ID: 17428
 # Current directory: C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/4_bit_counter/4_bit_counter.runs/synth_1
 # Command line: vivado.exe -log four_bit_counter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source four_bit_counter.tcl
 # Log file: C:/Users/Martin Stoyanov/IdeaProjects/va3aui/verilog/4_bit_counter/4_bit_counter.runs/synth_1/four_bit_counter.vds
@@ -17,8 +17,8 @@
 # CPU Physical cores:8
 # CPU Logical cores :16
 # Host memory       :17110 MB
-# Swap memory       :9942 MB
-# Total Virtual     :27052 MB
-# Available Virtual :11895 MB
+# Swap memory       :9926 MB
+# Total Virtual     :27036 MB
+# Available Virtual :10552 MB
 #-----------------------------------------------------------
 source four_bit_counter.tcl -notrace
