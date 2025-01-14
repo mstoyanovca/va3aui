@@ -4,3 +4,4 @@
 /verilog/*/*.ip_user_files
 /verilog/*/*.runs
 /verilog/*/*.sim
+/verilog/*/*.wcfg
