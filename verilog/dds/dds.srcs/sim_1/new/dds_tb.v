@@ -1,15 +1,11 @@
 `timescale 10ns/10ns
 
-module dds_wrapper(
-  input clk,
-  input [24:0] ph_i, 
-  input ph_valid_i, 
-  output [19:0] cos_o, 
-  output [19:0] sin_o);
-    
+module dds_tb;
   reg aclk;
   reg [31:0] s_axis_phase_tdata;
   reg s_axis_phase_tvalid;
+  wire [19:0] cos_o; 
+  wire [19:0] sin_o;
   
   initial begin
     aclk <= 0;
@@ -30,5 +26,5 @@ module dds_wrapper(
     .ph_i(s_axis_phase_tdata),
     .ph_valid_i(s_axis_phase_tvalid),
     .sin_o(sin_o));
-    
+
 endmodule
