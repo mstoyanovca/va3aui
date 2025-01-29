@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE29595CB811E9BC",
+      "boundary_crc": "0x3E7F1B4C99D5E8E9",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../dds.gen/sources_1/bd/dds",
       "name": "dds",
@@ -11,51 +11,23 @@
       "validated": "true"
     },
     "design_tree": {
-      "dds_compiler_0": "",
-      "xlslice_0": "",
-      "xlslice_1": ""
+      "dds_compiler_0": ""
     },
     "ports": {
-      "cos_o": {
-        "type": "data",
-        "direction": "O",
-        "left": "19",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
-      },
-      "sin_o": {
-        "type": "data",
-        "direction": "O",
-        "left": "19",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
-      },
-      "ph_i": {
-        "type": "data",
+      "s_axis_phase_tdata": {
         "direction": "I",
-        "left": "24",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
+        "left": "31",
+        "right": "0"
       },
-      "clk": {
+      "s_axis_phase_tvalid": {
         "direction": "I"
       },
-      "ph_valid_i": {
+      "m_axis_data_tdata": {
+        "direction": "O",
+        "left": "47",
+        "right": "0"
+      },
+      "aclk": {
         "direction": "I"
       }
     },
@@ -107,80 +79,31 @@
             "value": "Not_Required"
           }
         }
-      },
-      "xlslice_0": {
-        "vlnv": "xilinx.com:ip:xlslice:1.0",
-        "ip_revision": "4",
-        "xci_name": "dds_xlslice_0_0",
-        "xci_path": "ip\\dds_xlslice_0_0\\dds_xlslice_0_0.xci",
-        "inst_hier_path": "xlslice_0",
-        "parameters": {
-          "DIN_FROM": {
-            "value": "19"
-          },
-          "DIN_WIDTH": {
-            "value": "48"
-          },
-          "DOUT_WIDTH": {
-            "value": "20"
-          }
-        }
-      },
-      "xlslice_1": {
-        "vlnv": "xilinx.com:ip:xlslice:1.0",
-        "ip_revision": "4",
-        "xci_name": "dds_xlslice_0_1",
-        "xci_path": "ip\\dds_xlslice_0_1\\dds_xlslice_0_1.xci",
-        "inst_hier_path": "xlslice_1",
-        "parameters": {
-          "DIN_FROM": {
-            "value": "43"
-          },
-          "DIN_TO": {
-            "value": "24"
-          },
-          "DIN_WIDTH": {
-            "value": "48"
-          }
-        }
       }
     },
     "nets": {
-      "clk_1": {
+      "aclk_1": {
         "ports": [
-          "clk",
+          "aclk",
           "dds_compiler_0/aclk"
         ]
       },
       "dds_compiler_0_m_axis_data_tdata": {
         "ports": [
           "dds_compiler_0/m_axis_data_tdata",
-          "xlslice_0/Din",
-          "xlslice_1/Din"
+          "m_axis_data_tdata"
         ]
       },
-      "ph_i_1": {
+      "s_axis_phase_tdata_1": {
         "ports": [
-          "ph_i",
+          "s_axis_phase_tdata",
           "dds_compiler_0/s_axis_phase_tdata"
         ]
       },
-      "ph_valid_i_1": {
+      "s_axis_phase_tvalid_1": {
         "ports": [
-          "ph_valid_i",
+          "s_axis_phase_tvalid",
           "dds_compiler_0/s_axis_phase_tvalid"
-        ]
-      },
-      "xlslice_0_Dout": {
-        "ports": [
-          "xlslice_0/Dout",
-          "cos_o"
-        ]
-      },
-      "xlslice_1_Dout": {
-        "ports": [
-          "xlslice_1/Dout",
-          "sin_o"
         ]
       }
     }
