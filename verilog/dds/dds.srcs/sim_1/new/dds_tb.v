@@ -2,16 +2,15 @@
 
 module dds_tb;
   reg aclk;
-  reg [31:0] s_axis_phase_tdata;
   reg s_axis_phase_tvalid;
-  // wire [19:0] cos_o;
-  // wire [19:0] sin_o;
+  reg [31:0] s_axis_phase_tdata;
+  
   wire [47:0] m_axis_data_tdata;
   
   initial begin
     aclk <= 0;
-    s_axis_phase_tdata <= 32'd0;
     s_axis_phase_tvalid <= 0;
+    s_axis_phase_tdata <= 32'd0;
     #5;
     s_axis_phase_tvalid <= 1;
     s_axis_phase_tdata <= 32'h243809;

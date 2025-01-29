@@ -11,11 +11,6 @@ module dds_wrapper(
   input [31:0]s_axis_phase_tdata;
   output [47:0]m_axis_data_tdata;
 
-  wire aclk;
-  wire s_axis_phase_tvalid;
-  wire [31:0]s_axis_phase_tdata;
-  wire [47:0]m_axis_data_tdata;
-
   dds dds_i(
     .aclk(aclk),
     .m_axis_data_tdata(m_axis_data_tdata),
