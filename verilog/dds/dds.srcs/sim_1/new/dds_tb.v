@@ -1,28 +1,35 @@
-`timescale 10ns/10ns
+`timescale 1ns/1ns
 
-module dds_tb;
-  reg aclk;
-  reg s_axis_phase_tvalid;
-  reg [31:0] s_axis_phase_tdata;
+module dds_tb();
+  reg clk_i;
+  reg ph_valid_i;
+  reg [31:0] ph_data_i;
   
-  wire [47:0] m_axis_data_tdata;
+  wire [47:0] m_data_o;
+  wire m_valid_o;
+  
+  localparam [24:0] ph_inc = 25'h243809;
   
   initial begin
-    aclk <= 0;
-    s_axis_phase_tvalid <= 0;
-    s_axis_phase_tdata <= 32'd0;
-    #5;
-    s_axis_phase_tvalid <= 1;
-    s_axis_phase_tdata <= 32'h243809;
+    clk_i <= 1;
+    ph_valid_i <= 1;
+    ph_data_i <= 32'd0;
   end
   
   always begin
-    #1 aclk = ~aclk;
+    #5;
+    clk_i = ~clk_i;
+  end
+  
+  always@(posedge clk_i) begin
+    ph_data_i = ph_data_i + ph_inc;
   end
   
   dds_wrapper dds_wrapper_0(
-    .aclk(aclk),
-    .s_axis_phase_tvalid(s_axis_phase_tvalid),
-    .s_axis_phase_tdata(s_axis_phase_tdata),
-    .m_axis_data_tdata(m_axis_data_tdata));
+    .clk_i(clk_i),
+    .ph_data_i(ph_data_i),
+    .ph_valid_i(ph_valid_i),
+    .m_data_o(m_data_o),
+    .m_valid_o(m_valid_o));
+
 endmodule

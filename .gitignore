@@ -1,6 +1,5 @@
 /.git
 /verilog/*/*.cache
-/verilog/*/*.gen
 /verilog/*/*.hw
 /verilog/*/*.ip_user_files
 /verilog/*/*.runs

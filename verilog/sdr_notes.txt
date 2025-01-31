@@ -38,9 +38,9 @@ dBc/Hz needed is 120dB
 
 for SIN COS LUT mode fc = 100MHz
 out_w = SFDR/6 = 20 bits
-ph_w = log2(fc/freq_res) = 25 bits
-fo = fc*PINC/2^ph_w
-for 7.074MHz PINC = 2,373,641 (h243809)
+ph_w = log2(fc/freq_resolution) = 25 bits
+fo = fc*PHINC/2^ph_w
+for 7.074MHz PHINC = 2,373,641 (h243809)
 cos_o = [19:0]
 sin_o = [43:24]
 
