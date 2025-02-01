@@ -11,19 +11,14 @@ module dds_tb();
   localparam [24:0] ph_inc = 25'h243809;
   
   initial begin
-    clk_i <= 1;
+    clk_i <= 0;
     ph_valid_i <= 1;
     ph_data_i <= 32'd0;
   end
   
-  always begin
-    #5;
-    clk_i = ~clk_i;
-  end
+  always #5 clk_i = ~clk_i;
   
-  always@(posedge clk_i) begin
-    ph_data_i = ph_data_i + ph_inc;
-  end
+  always@(posedge clk_i) ph_data_i <= ph_data_i + ph_inc;
   
   dds_wrapper dds_wrapper_0(
     .clk_i(clk_i),
