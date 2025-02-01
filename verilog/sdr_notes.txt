@@ -43,6 +43,7 @@ fo = fc*PHINC/2^ph_w
 for 7.074MHz PHINC = 2,373,641 (h243809)
 cos_o = [19:0]
 sin_o = [43:24]
+latency = 1
 
 CIC decimator:
 ratio = 169;

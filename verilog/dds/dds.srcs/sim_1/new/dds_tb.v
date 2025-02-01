@@ -13,7 +13,7 @@ module dds_tb();
   initial begin
     clk_i <= 0;
     ph_valid_i <= 1;
-    ph_data_i <= 32'd0;
+    ph_data_i <= ph_inc;
   end
   
   always #5 clk_i = ~clk_i;
