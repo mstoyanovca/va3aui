@@ -11,13 +11,13 @@ preplace port port-id_clk_i -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
 preplace portBus ph_data_i -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
 preplace portBus m_data_o -pg 1 -lvl 2 -x 460 -y 90 -defaultsOSRD
 preplace inst dds_compiler_0 -pg 1 -lvl 1 -x 230 -y 90 -defaultsOSRD
-preplace netloc ph_data_i_1 1 0 1 NJ 80
+preplace netloc clk_i_1 1 0 1 NJ 120
 preplace netloc dds_compiler_0_m_axis_data_tdata 1 1 1 NJ 90
 preplace netloc dds_compiler_0_m_axis_data_tvalid 1 1 1 NJ 110
+preplace netloc ph_data_i_1 1 0 1 NJ 80
 preplace netloc ph_valid_i_1 1 0 1 NJ 100
-preplace netloc clk_i_1 1 0 1 NJ 120
 levelinfo -pg 1 0 230 460
-pagesize -pg 1 -db -bbox -sgen -150 0 610 180
+pagesize -pg 1 -db -bbox -sgen -160 0 610 180
 "
 }
 0

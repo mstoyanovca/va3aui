@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan 29 19:55:16 2025" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jan 31 19:43:39 2025" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="dds" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -55,7 +55,7 @@
         <PARAMETER NAME="C_HAS_S_PHASE" VALUE="1"/>
         <PARAMETER NAME="C_HAS_TLAST" VALUE="0"/>
         <PARAMETER NAME="C_HAS_TREADY" VALUE="0"/>
-        <PARAMETER NAME="C_LATENCY" VALUE="7"/>
+        <PARAMETER NAME="C_LATENCY" VALUE="1"/>
         <PARAMETER NAME="C_MEM_TYPE" VALUE="1"/>
         <PARAMETER NAME="C_MODE_OF_OPERATION" VALUE="0"/>
         <PARAMETER NAME="C_MODULUS" VALUE="9"/>
@@ -99,8 +99,8 @@
         <PARAMETER NAME="Has_ARESETn" VALUE="false"/>
         <PARAMETER NAME="Has_Phase_Out" VALUE="false"/>
         <PARAMETER NAME="Has_TREADY" VALUE="false"/>
-        <PARAMETER NAME="Latency" VALUE="7"/>
-        <PARAMETER NAME="Latency_Configuration" VALUE="Auto"/>
+        <PARAMETER NAME="Latency" VALUE="1"/>
+        <PARAMETER NAME="Latency_Configuration" VALUE="Configurable"/>
         <PARAMETER NAME="M_DATA_Has_TUSER" VALUE="Not_Required"/>
         <PARAMETER NAME="M_PHASE_Has_TUSER" VALUE="Not_Required"/>
         <PARAMETER NAME="Memory_Type" VALUE="Auto"/>

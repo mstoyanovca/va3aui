@@ -99,7 +99,10 @@
             "value": "false"
           },
           "Latency": {
-            "value": "7"
+            "value": "1"
+          },
+          "Latency_Configuration": {
+            "value": "Configurable"
           },
           "M_DATA_Has_TUSER": {
             "value": "Not_Required"

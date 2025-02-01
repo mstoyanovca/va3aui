@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-// Date        : Wed Jan 29 12:02:28 2025
+// Date        : Fri Jan 31 19:45:22 2025
 // Host        : DESKTOP running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub {c:/Users/Martin
 //               Stoyanov/IdeaProjects/va3aui/verilog/dds/dds.gen/sources_1/bd/dds/ip/dds_dds_compiler_0_0/dds_dds_compiler_0_0_stub.v}

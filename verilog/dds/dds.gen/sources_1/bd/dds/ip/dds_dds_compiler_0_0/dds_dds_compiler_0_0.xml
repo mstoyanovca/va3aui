@@ -1100,11 +1100,11 @@ um {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 29 17:00:52 UTC 2025</spirit:value>
+            <spirit:value>Sat Feb 01 00:43:39 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:46e7b503</spirit:value>
+            <spirit:value>9:84c4146a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1118,11 +1118,11 @@ um {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 29 17:02:32 UTC 2025</spirit:value>
+            <spirit:value>Sat Feb 01 00:45:27 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:46e7b503</spirit:value>
+            <spirit:value>9:84c4146a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1136,11 +1136,11 @@ um {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 29 17:00:52 UTC 2025</spirit:value>
+            <spirit:value>Sat Feb 01 00:43:38 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:46e7b503</spirit:value>
+            <spirit:value>9:84c4146a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1184,7 +1184,7 @@ um {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1af73640</spirit:value>
+            <spirit:value>9:39ee8773</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1200,11 +1200,11 @@ um {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 29 17:00:52 UTC 2025</spirit:value>
+            <spirit:value>Sat Feb 01 00:43:38 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1af73640</spirit:value>
+            <spirit:value>9:39ee8773</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1248,7 +1248,7 @@ um {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:46e7b503</spirit:value>
+            <spirit:value>9:84c4146a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1264,11 +1264,11 @@ um {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 29 17:00:52 UTC 2025</spirit:value>
+            <spirit:value>Sat Feb 01 00:43:38 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:46e7b503</spirit:value>
+            <spirit:value>9:84c4146a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2021,7 +2021,7 @@ um {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_LATENCY</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_LATENCY">7</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_LATENCY">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_MEM_TYPE</spirit:name>
@@ -2209,6 +2209,30 @@ um {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency
       <spirit:enumeration>Streaming</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
+      <spirit:name>choice_list_2b2671dc</spirit:name>
+      <spirit:enumeration>1</spirit:enumeration>
+      <spirit:enumeration>2</spirit:enumeration>
+      <spirit:enumeration>3</spirit:enumeration>
+      <spirit:enumeration>4</spirit:enumeration>
+      <spirit:enumeration>5</spirit:enumeration>
+      <spirit:enumeration>6</spirit:enumeration>
+      <spirit:enumeration>7</spirit:enumeration>
+      <spirit:enumeration>8</spirit:enumeration>
+      <spirit:enumeration>9</spirit:enumeration>
+      <spirit:enumeration>10</spirit:enumeration>
+      <spirit:enumeration>11</spirit:enumeration>
+      <spirit:enumeration>12</spirit:enumeration>
+      <spirit:enumeration>13</spirit:enumeration>
+      <spirit:enumeration>14</spirit:enumeration>
+      <spirit:enumeration>15</spirit:enumeration>
+      <spirit:enumeration>16</spirit:enumeration>
+      <spirit:enumeration>17</spirit:enumeration>
+      <spirit:enumeration>18</spirit:enumeration>
+      <spirit:enumeration>19</spirit:enumeration>
+      <spirit:enumeration>20</spirit:enumeration>
+      <spirit:enumeration>21</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
       <spirit:name>choice_list_45db86b7</spirit:name>
       <spirit:enumeration>Auto</spirit:enumeration>
       <spirit:enumeration>Configurable</spirit:enumeration>
@@ -2233,31 +2257,6 @@ um {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency
       <spirit:name>choice_list_cd7e1d82</spirit:name>
       <spirit:enumeration>Coregen</spirit:enumeration>
       <spirit:enumeration>Sysgen</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_d819290b</spirit:name>
-      <spirit:enumeration>0</spirit:enumeration>
-      <spirit:enumeration>1</spirit:enumeration>
-      <spirit:enumeration>2</spirit:enumeration>
-      <spirit:enumeration>3</spirit:enumeration>
-      <spirit:enumeration>4</spirit:enumeration>
-      <spirit:enumeration>5</spirit:enumeration>
-      <spirit:enumeration>6</spirit:enumeration>
-      <spirit:enumeration>7</spirit:enumeration>
-      <spirit:enumeration>8</spirit:enumeration>
-      <spirit:enumeration>9</spirit:enumeration>
-      <spirit:enumeration>10</spirit:enumeration>
-      <spirit:enumeration>11</spirit:enumeration>
-      <spirit:enumeration>12</spirit:enumeration>
-      <spirit:enumeration>13</spirit:enumeration>
-      <spirit:enumeration>14</spirit:enumeration>
-      <spirit:enumeration>15</spirit:enumeration>
-      <spirit:enumeration>16</spirit:enumeration>
-      <spirit:enumeration>17</spirit:enumeration>
-      <spirit:enumeration>18</spirit:enumeration>
-      <spirit:enumeration>19</spirit:enumeration>
-      <spirit:enumeration>20</spirit:enumeration>
-      <spirit:enumeration>21</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_de3e80a0</spirit:name>
@@ -3081,11 +3080,11 @@ um {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Latency_Configuration</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Latency_Configuration" spirit:choiceRef="choice_list_45db86b7" spirit:order="28">Auto</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Latency_Configuration" spirit:choiceRef="choice_list_45db86b7" spirit:order="28">Configurable</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Latency</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Latency" spirit:choiceRef="choice_list_d819290b" spirit:order="29">7</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Latency" spirit:choiceRef="choice_list_2b2671dc" spirit:order="29">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Has_ARESETn</spirit:name>
@@ -3411,6 +3410,7 @@ um {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DATA_Has_TLAST" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Has_Phase_Out" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Latency" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Latency_Configuration" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M_DATA_Has_TUSER" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Noise_Shaping" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.OUTPUT_FORM" xilinx:valueSource="user"/>
