@@ -1,23 +1,26 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-702,-342",
+   "Default View_TopLeft":"-626,-323",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.7.1 2023-07-26 3bc4126617 VDI=43 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
-preplace port port-id_m_valid_o -pg 1 -lvl 2 -x 460 -y 110 -defaultsOSRD
-preplace port port-id_ph_valid_i -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
-preplace port port-id_clk_i -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
-preplace portBus ph_data_i -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
-preplace portBus m_data_o -pg 1 -lvl 2 -x 460 -y 90 -defaultsOSRD
+preplace port port-id_clock_i -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_phase_valid_i -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace portBus cos_o -pg 1 -lvl 3 -x 660 -y 60 -defaultsOSRD
+preplace portBus sin_o -pg 1 -lvl 3 -x 660 -y 160 -defaultsOSRD
+preplace portBus phase_data_i -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
 preplace inst dds_compiler_0 -pg 1 -lvl 1 -x 230 -y 90 -defaultsOSRD
-preplace netloc clk_i_1 1 0 1 NJ 120
-preplace netloc dds_compiler_0_m_axis_data_tdata 1 1 1 NJ 90
-preplace netloc dds_compiler_0_m_axis_data_tvalid 1 1 1 NJ 110
-preplace netloc ph_data_i_1 1 0 1 NJ 80
-preplace netloc ph_valid_i_1 1 0 1 NJ 100
-levelinfo -pg 1 0 230 460
-pagesize -pg 1 -db -bbox -sgen -160 0 610 180
+preplace inst xlslice_0 -pg 1 -lvl 2 -x 540 -y 60 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 2 -x 540 -y 160 -defaultsOSRD
+preplace netloc clock_i_1 1 0 1 NJ 120
+preplace netloc dds_compiler_0_m_axis_data_tdata 1 1 1 440 60n
+preplace netloc phase_data_i_1 1 0 1 NJ 80
+preplace netloc phase_valid_i_1 1 0 1 NJ 100
+preplace netloc xlslice_0_Dout 1 2 1 NJ 60
+preplace netloc xlslice_1_Dout 1 2 1 NJ 160
+levelinfo -pg 1 0 230 540 660
+pagesize -pg 1 -db -bbox -sgen -180 0 790 220
 "
 }
 0

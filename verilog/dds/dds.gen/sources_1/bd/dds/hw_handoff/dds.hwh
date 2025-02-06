@@ -1,32 +1,32 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jan 31 19:43:39 2025" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Feb  3 13:23:35 2025" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="dds" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_i" SIGIS="clk" SIGNAME="External_Ports_clk_i">
+    <PORT DIR="I" NAME="clock_i" SIGIS="undef" SIGNAME="External_Ports_clock_i">
       <CONNECTIONS>
         <CONNECTION INSTANCE="dds_compiler_0" PORT="aclk"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="47" NAME="m_data_o" RIGHT="0" SIGIS="data" SIGNAME="dds_compiler_0_m_axis_data_tdata">
+    <PORT DIR="O" LEFT="19" NAME="cos_o" RIGHT="0" SIGIS="data" SIGNAME="xlslice_0_Dout">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="dds_compiler_0" PORT="m_axis_data_tdata"/>
+        <CONNECTION INSTANCE="xlslice_0" PORT="Dout"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="m_valid_o" SIGIS="data" SIGNAME="dds_compiler_0_m_axis_data_tvalid">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="dds_compiler_0" PORT="m_axis_data_tvalid"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="31" NAME="ph_data_i" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_ph_data_i">
+    <PORT DIR="I" LEFT="31" NAME="phase_data_i" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_phase_data_i">
       <CONNECTIONS>
         <CONNECTION INSTANCE="dds_compiler_0" PORT="s_axis_phase_tdata"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="ph_valid_i" SIGIS="data" SIGNAME="External_Ports_ph_valid_i">
+    <PORT DIR="I" NAME="phase_valid_i" SIGIS="undef" SIGNAME="External_Ports_phase_valid_i">
       <CONNECTIONS>
         <CONNECTION INSTANCE="dds_compiler_0" PORT="s_axis_phase_tvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="19" NAME="sin_o" RIGHT="0" SIGIS="data" SIGNAME="xlslice_1_Dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xlslice_1" PORT="Dout"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -194,29 +194,26 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_clk_i">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_clock_i">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="clk_i"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="clock_i"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="47" NAME="m_axis_data_tdata" RIGHT="0" SIGIS="undef" SIGNAME="dds_compiler_0_m_axis_data_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="m_data_o"/>
+            <CONNECTION INSTANCE="xlslice_0" PORT="Din"/>
+            <CONNECTION INSTANCE="xlslice_1" PORT="Din"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axis_data_tvalid" SIGIS="undef" SIGNAME="dds_compiler_0_m_axis_data_tvalid">
+        <PORT DIR="O" NAME="m_axis_data_tvalid" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="s_axis_phase_tdata" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_phase_data_i">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="m_valid_o"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="phase_data_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="s_axis_phase_tdata" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_ph_data_i">
+        <PORT DIR="I" NAME="s_axis_phase_tvalid" SIGIS="undef" SIGNAME="External_Ports_phase_valid_i">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="ph_data_i"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="s_axis_phase_tvalid" SIGIS="undef" SIGNAME="External_Ports_ph_valid_i">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="ph_valid_i"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="phase_valid_i"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -260,6 +257,54 @@
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/xlslice_0" HWVERSION="1.0" INSTANCE="xlslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_FROM" VALUE="19"/>
+        <PARAMETER NAME="DIN_TO" VALUE="0"/>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="48"/>
+        <PARAMETER NAME="Component_Name" VALUE="dds_xlslice_0_0"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="20"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="47" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="dds_compiler_0_m_axis_data_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dds_compiler_0" PORT="m_axis_data_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="19" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="cos_o"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/xlslice_1" HWVERSION="1.0" INSTANCE="xlslice_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_FROM" VALUE="43"/>
+        <PARAMETER NAME="DIN_TO" VALUE="24"/>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="48"/>
+        <PARAMETER NAME="Component_Name" VALUE="dds_xlslice_1_0"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="20"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="47" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="dds_compiler_0_m_axis_data_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dds_compiler_0" PORT="m_axis_data_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="19" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_1_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sin_o"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
     </MODULE>
   </MODULES>
 

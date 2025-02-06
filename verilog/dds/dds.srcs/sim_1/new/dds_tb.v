@@ -1,43 +1,34 @@
 `timescale 1ns/1ns
 
 module dds_tb();
-  reg clk_i;
-  reg ph_valid_i;
-  reg [31:0] ph_data_i;
+  reg clock_i;
+  reg [24:0]phase_data_lsb;
+  reg [6:0]phase_data_msb;
   
-  wire [47:0] m_data_o;
-  wire m_valid_o;
+  wire [19:0]cos_o;
+  wire [19:0]sin_o;
   
-  localparam [24:0] ph_inc = 25'h243809;
-  // fc = 100MHz, T = 10ns:
   localparam fc = 100e6;
-  localparam clock_period = 1e9 / fc;
+  localparam time_scale = 1e-9; 
+  localparam clock_period = 1/(fc*time_scale);  // 10ns
+  localparam fo = 7.074e6;                      // 40m FT8
   localparam phase_width = 25;
-  localparam [31:0] fo = 7.074e6;
+  localparam [24:0]df = fo*2**phase_width/fc;
   
   initial begin
-    clk_i <= 0;
-    ph_valid_i <= 1;
-    ph_data_i <= ph_inc;
-    $display("phase_increment=%0h", phase_increment(fo));
+    clock_i <= 0;
+    phase_data_lsb <= df;
+    phase_data_msb <= 7'd0;
   end
   
-  always #(clock_period/2) clk_i = ~clk_i;
-  
-  always@(posedge clk_i) ph_data_i <= ph_data_i + ph_inc;
-  
-  function [24:0] phase_increment;
-    input reg [31:0] frequency;
-    begin
-      phase_increment = (frequency * 2^phase_width) / fc;
-    end
-  endfunction
+  always #(clock_period/2) clock_i = ~clock_i;
+  always@(posedge clock_i) phase_data_lsb = phase_data_lsb + df;
   
   dds_wrapper dds_wrapper_0(
-    .clk_i(clk_i),
-    .ph_data_i(ph_data_i),
-    .ph_valid_i(ph_valid_i),
-    .m_data_o(m_data_o),
-    .m_valid_o(m_valid_o));
+    .clock_i(clock_i),
+    .phase_valid_i(1'b1),
+    .phase_data_i({phase_data_msb, phase_data_lsb}),
+    .cos_o(cos_o),
+    .sin_o(sin_o));
 
 endmodule

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xAEA4CC26B6E562B4",
+      "boundary_crc": "0x3F86C22D8A2EF2F6",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../dds.gen/sources_1/bd/dds",
       "name": "dds",
@@ -11,10 +11,42 @@
       "validated": "true"
     },
     "design_tree": {
-      "dds_compiler_0": ""
+      "dds_compiler_0": "",
+      "xlslice_0": "",
+      "xlslice_1": ""
     },
     "ports": {
-      "ph_data_i": {
+      "cos_o": {
+        "type": "data",
+        "direction": "O",
+        "left": "19",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "sin_o": {
+        "type": "data",
+        "direction": "O",
+        "left": "19",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "clock_i": {
+        "direction": "I"
+      },
+      "phase_valid_i": {
+        "direction": "I"
+      },
+      "phase_data_i": {
         "type": "data",
         "direction": "I",
         "left": "31",
@@ -22,63 +54,6 @@
         "parameters": {
           "LAYERED_METADATA": {
             "value": "undef",
-            "value_src": "default"
-          }
-        }
-      },
-      "m_data_o": {
-        "type": "data",
-        "direction": "O",
-        "left": "47",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
-      },
-      "m_valid_o": {
-        "type": "data",
-        "direction": "O",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
-      },
-      "ph_valid_i": {
-        "type": "data",
-        "direction": "I",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
-      },
-      "clk_i": {
-        "type": "clk",
-        "direction": "I",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "dds_clk_i",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "100000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0",
             "value_src": "default"
           }
         }
@@ -135,37 +110,83 @@
             "value": "Not_Required"
           }
         }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "4",
+        "xci_name": "dds_xlslice_0_0",
+        "xci_path": "ip\\dds_xlslice_0_0\\dds_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "19"
+          },
+          "DIN_TO": {
+            "value": "0"
+          },
+          "DIN_WIDTH": {
+            "value": "48"
+          },
+          "DOUT_WIDTH": {
+            "value": "20"
+          }
+        }
+      },
+      "xlslice_1": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "4",
+        "xci_name": "dds_xlslice_1_0",
+        "xci_path": "ip\\dds_xlslice_1_0\\dds_xlslice_1_0.xci",
+        "inst_hier_path": "xlslice_1",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "43"
+          },
+          "DIN_TO": {
+            "value": "24"
+          },
+          "DIN_WIDTH": {
+            "value": "48"
+          }
+        }
       }
     },
     "nets": {
-      "clk_i_1": {
+      "clock_i_1": {
         "ports": [
-          "clk_i",
+          "clock_i",
           "dds_compiler_0/aclk"
         ]
       },
       "dds_compiler_0_m_axis_data_tdata": {
         "ports": [
           "dds_compiler_0/m_axis_data_tdata",
-          "m_data_o"
+          "xlslice_0/Din",
+          "xlslice_1/Din"
         ]
       },
-      "dds_compiler_0_m_axis_data_tvalid": {
+      "phase_data_i_1": {
         "ports": [
-          "dds_compiler_0/m_axis_data_tvalid",
-          "m_valid_o"
-        ]
-      },
-      "ph_data_i_1": {
-        "ports": [
-          "ph_data_i",
+          "phase_data_i",
           "dds_compiler_0/s_axis_phase_tdata"
         ]
       },
-      "ph_valid_i_1": {
+      "phase_valid_i_1": {
         "ports": [
-          "ph_valid_i",
+          "phase_valid_i",
           "dds_compiler_0/s_axis_phase_tvalid"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "cos_o"
+        ]
+      },
+      "xlslice_1_Dout": {
+        "ports": [
+          "xlslice_1/Dout",
+          "sin_o"
         ]
       }
     }
